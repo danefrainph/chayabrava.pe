@@ -1,0 +1,112 @@
+/* ==========================================================================
+   CONTACTO — sección "¿Trabajamos juntos?" con el formulario
+   ========================================================================== */
+.page-contacto .header { position: relative; top: 0; background: #000; }
+.page-contacto .header.is-fixed { position: fixed; }
+
+.c-section {
+  --tint: #fbf8f2;
+  position: relative; isolation: isolate; overflow: hidden;
+  padding: clamp(40px, 4.4vw, 62px) 0 clamp(90px, 9vw, 130px);
+  border-top: 4px solid #1d1d1b;
+}
+
+/* Escalones amarillos en las esquinas */
+.c-corner { position: absolute; z-index: -1; background: var(--c-yellow); }
+.c-corner--tl {
+  left: 0; top: 0; width: clamp(110px, 13.5vw, 189px); height: clamp(98px, 11.9vw, 167px);
+  clip-path: polygon(0 0, 100% 0, 100% 31%, 65.6% 31%, 65.6% 64%, 34.4% 64%, 34.4% 100%, 0 100%);
+}
+.c-corner--br {
+  right: 0; bottom: 0; width: clamp(110px, 13.3vw, 186px); height: clamp(98px, 12.2vw, 171px);
+  clip-path: polygon(65.6% 0, 100% 0, 100% 100%, 0 100%, 0 66.6%, 32.8% 66.6%, 32.8% 33.3%, 65.6% 33.3%);
+}
+.c-corner { transition: transform .8s var(--ease-out); }
+.c-section:hover .c-corner--tl { transform: translate(-4px, -4px); }
+.c-section:hover .c-corner--br { transform: translate(4px, 4px); }
+
+.c-inner { display: grid; justify-items: center; text-align: center; }
+.c-title { font-size: clamp(42px, 6.3vw, 88px); line-height: 1; color: #0b0b0b; margin-bottom: clamp(10px, 1vw, 14px); }
+.c-sub { max-width: 1000px; font-weight: 700; text-transform: uppercase; font-size: clamp(12px, 1.05vw, 15px); line-height: 1.3; color: #0b0b0b; margin-bottom: clamp(18px, 1.6vw, 22px); }
+
+/* ---------- Tarjeta del formulario ---------- */
+.c-card {
+  position: relative; width: min(100%, 520px);
+  padding: clamp(28px, 2.8vw, 40px) clamp(22px, 2.9vw, 40px) clamp(54px, 4.6vw, 64px);
+  background: #fff; border-radius: 22px; text-align: left;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .06);
+}
+.c-card__title { font-size: clamp(28px, 2.5vw, 35px); color: #0b0b0b; margin-bottom: 10px; }
+.c-card__intro { font-size: 12px; font-weight: 700; line-height: 1.3; color: #111; margin-bottom: 22px; }
+
+/* Marcador de campo obligatorio: cuadrito inca rojo */
+.req {
+  display: inline-block; vertical-align: -1px; width: 10px; height: 10px; margin-left: 4px;
+  border: 1.6px solid var(--c-red-flag);
+  background: linear-gradient(var(--c-red-flag), var(--c-red-flag)) center / 4px 4px no-repeat;
+}
+
+.form { display: grid; gap: 16px 22px; grid-template-columns: 1fr 1fr; }
+.form__full { grid-column: 1 / -1; }
+.field { display: grid; gap: 6px; align-content: start; }
+.field label, .field .label { font-size: 12px; font-weight: 700; color: #111; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 38px; padding: 8px 12px;
+  border: 1.5px solid transparent; border-radius: 6px;
+  background: #f6f3ee; color: #111; font-size: 14px;
+  transition: border-color .25s, background .25s, box-shadow .25s;
+}
+.field input::placeholder, .field textarea::placeholder { color: #c4beb5; }
+.field select {
+  appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 14'%3E%3Cpath d='M1 1l11 11L23 1' fill='none' stroke='%23111' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 18px auto;
+}
+.field select:invalid, .field select.is-placeholder { color: #c4beb5; }
+.field textarea { min-height: 116px; resize: vertical; line-height: 1.4; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--c-yellow); background: #fff; box-shadow: 0 0 0 3px rgba(252, 191, 0, .25); }
+.field.is-invalid input, .field.is-invalid select, .field.is-invalid textarea { border-color: var(--c-red-flag); background: #fff4f2; }
+.field.is-valid input, .field.is-valid select, .field.is-valid textarea { border-color: rgba(0, 184, 148, .5); }
+.field__error { min-height: 0; font-size: 11.5px; line-height: 1.2; color: #d01b0f; }
+.field__error:empty { display: none; }
+.field__foot { display: flex; justify-content: space-between; gap: 10px; }
+.field__count { margin-left: auto; font-size: 11px; color: #9a948c; }
+
+.consent { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 10px; font-size: 11.5px; font-weight: 700; line-height: 1.3; color: #111; cursor: pointer; }
+.consent input { appearance: none; -webkit-appearance: none; flex: none; width: 16px; height: 16px; margin: 0; border: 1.6px solid #111; border-radius: 2px; background: #fff; display: grid; place-items: center; cursor: pointer; }
+.consent input::after { content: ""; width: 8px; height: 8px; background: var(--c-red-flag); transform: scale(0); transition: transform .2s var(--ease-out); }
+.consent input:checked::after { transform: scale(1); }
+.consent.is-invalid input { border-color: var(--c-red-flag); }
+
+/* Botón ENVIAR montado sobre el borde inferior de la tarjeta */
+.c-send {
+  position: absolute; left: 50%; bottom: 0; translate: -50% 50%;
+  min-width: 143px; height: 51px; padding: 0 30px; border-radius: 999px;
+  background: var(--c-red-flag); color: #fff;
+  font-family: var(--f-display); font-size: 26px; text-transform: uppercase; line-height: 1;
+  box-shadow: 0 10px 22px rgba(255, 6, 0, .3);
+  transition: transform .35s var(--ease-out), background .3s, color .3s;
+}
+.c-send:hover { transform: translateY(-3px); background: var(--c-yellow); color: #000; }
+.form.is-shaking { animation: shake .45s var(--ease-out); }
+@keyframes shake { 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
+
+/* Paso 2: elegir cómo enviarlo */
+.c-choice, .form-success { text-align: center; padding: 6px 0 4px; }
+.c-choice[hidden], .form-success[hidden], .form[hidden] { display: none; }
+.c-choice h3, .form-success h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 30px; line-height: 1; margin-bottom: 10px; }
+.c-choice p, .form-success p { font-size: 14px; line-height: 1.4; color: #333; margin-bottom: 20px; }
+.c-choice__btns { display: grid; gap: 12px; max-width: 300px; margin: 0 auto 16px; }
+.c-choice__btns .btn { width: 100%; box-shadow: none; }
+.btn--wa { --btn-bg: var(--c-mint); --btn-fg: #000; }
+.btn--dark { --btn-bg: #111; --btn-fg: #fff; --btn-hover-bg: var(--c-red-flag); --btn-hover-fg: #fff; }
+.c-back { font-size: 13px; text-decoration: underline; text-underline-offset: 3px; color: #555; }
+.c-back:hover { color: var(--c-red-flag); }
+.form-success__icon { width: 64px; margin: 0 auto 16px; }
+.form-success a { color: var(--c-red-deep); font-weight: 700; }
+
+@media (max-width: 640px) {
+  .form { grid-template-columns: 1fr; }
+  .c-corner--tl { width: 80px; height: 72px; }
+  .c-corner--br { width: 80px; height: 72px; }
+}

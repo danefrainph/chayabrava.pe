@@ -1,6 +1,6 @@
 /* ==========================================================================
-   CHAYA BRAVA — JS global
-   Header, menú móvil, animaciones de aparición, contadores, utilidades.
+   CHAYA BRAVA — JS global (se carga en todas las páginas)
+   Header, menú móvil, animaciones de aparición, contadores y utilidades.
    ========================================================================== */
 (() => {
   "use strict";
@@ -8,6 +8,7 @@
   const doc = document.documentElement;
   doc.classList.remove("no-js");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
 
   /* ---------- Datos de contacto (un solo lugar para editarlos) ---------- */
   window.CHAYA = {
@@ -39,24 +40,15 @@
   /* ---------- Header: fijo al hacer scroll, se oculta al bajar ---------- */
   const header = document.querySelector(".header");
   const toTop = document.querySelector(".to-top");
-  const ring = toTop && toTop.querySelector("circle");
-  const ringLen = ring ? 2 * Math.PI * ring.r.baseVal.value : 0;
-  if (ring) { ring.style.strokeDasharray = ringLen; ring.style.strokeDashoffset = ringLen; }
-
   let lastY = window.scrollY;
   let ticking = false;
   const onScroll = () => {
     const y = window.scrollY;
     if (header) {
-      const threshold = 160;
-      header.classList.toggle("is-fixed", y > threshold);
+      header.classList.toggle("is-fixed", y > 160);
       header.classList.toggle("is-hidden", y > 600 && y > lastY && !document.body.classList.contains("menu-open"));
     }
-    if (toTop) {
-      toTop.classList.toggle("is-visible", y > 700);
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      if (ring) ring.style.strokeDashoffset = ringLen - (y / Math.max(max, 1)) * ringLen;
-    }
+    if (toTop) toTop.classList.toggle("is-visible", y > 700);
     lastY = y;
     ticking = false;
   };
@@ -64,7 +56,6 @@
     if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
   onScroll();
-
   toTop && toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }));
 
   /* ---------- Menú móvil ---------- */
@@ -100,10 +91,7 @@
   if ("IntersectionObserver" in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add("is-in"); io.unobserve(entry.target); }
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
     revealables.forEach((el) => io.observe(el));
@@ -111,16 +99,26 @@
     revealables.forEach((el) => el.classList.add("is-in"));
   }
 
+  /* ---------- Pasos 01–04: se encienden uno tras otro ---------- */
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const so = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        [...e.target.children].forEach((li, i) => { li.style.setProperty("--d", `${i * 0.22}s`); li.classList.add("is-lit"); });
+        so.unobserve(e.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll(".steps").forEach((s) => so.observe(s));
+  }
+
   /* ---------- Contadores animados ---------- */
   const counters = document.querySelectorAll("[data-count]");
   const animateCount = (el) => {
     const end = parseFloat(el.dataset.count);
-    const dur = 1800;
     const start = performance.now();
     const step = (now) => {
-      const p = Math.min((now - start) / dur, 1);
-      const eased = 1 - Math.pow(1 - p, 4);
-      el.textContent = Math.round(end * eased);
+      const p = Math.min((now - start) / 1800, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
@@ -132,16 +130,23 @@
     counters.forEach((c) => { c.textContent = "0"; co.observe(c); });
   }
 
-  /* ---------- Botones magnéticos (solo con puntero fino) ---------- */
-  if (window.matchMedia("(pointer: fine)").matches && !reduceMotion) {
+  /* ---------- Botones magnéticos y tarjetas con inclinación ---------- */
+  if (finePointer && !reduceMotion) {
     document.querySelectorAll("[data-magnetic]").forEach((el) => {
       el.addEventListener("pointermove", (e) => {
         const r = el.getBoundingClientRect();
-        const x = (e.clientX - r.left - r.width / 2) * 0.25;
-        const y = (e.clientY - r.top - r.height / 2) * 0.35;
-        el.style.translate = `${x}px ${y}px`;
+        el.style.translate = `${(e.clientX - r.left - r.width / 2) * 0.22}px ${(e.clientY - r.top - r.height / 2) * 0.3}px`;
       });
       el.addEventListener("pointerleave", () => { el.style.translate = ""; });
+    });
+    document.querySelectorAll("[data-tilt]").forEach((el) => {
+      el.addEventListener("pointermove", (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
+      });
+      el.addEventListener("pointerleave", () => { el.style.transform = ""; });
     });
   }
 
@@ -151,15 +156,4 @@
     a.target = "_blank";
     a.rel = "noopener";
   });
-
-  /* ---------- Acordeón: solo una pregunta abierta a la vez ---------- */
-  document.querySelectorAll("[data-accordion]").forEach((acc) => {
-    const items = acc.querySelectorAll("details");
-    items.forEach((d) => d.addEventListener("toggle", () => {
-      if (d.open) items.forEach((o) => { if (o !== d) o.open = false; });
-    }));
-  });
-
-  /* ---------- Año en el pie ---------- */
-  document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 })();

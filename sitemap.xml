@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://chayabrava.pe/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://chayabrava.pe/nosotros.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chayabrava.pe/branding.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chayabrava.pe/audiovisual.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chayabrava.pe/paginas-web.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chayabrava.pe/contacto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/nosotros/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/branding/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/audiovisual/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/paginas-web/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/contacto/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chayabrava.pe/blog/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

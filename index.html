@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chaya Brava | Agencia de branding, audiovisual y páginas web en Perú</title>
   <meta name="description" content="Chaya Brava es una agencia peruana de diseño y audiovisual. Creamos branding, contenido audiovisual y páginas web que ayudan a tu negocio a crecer.">
-  <meta name="theme-color" content="#0b0b0b">
+  <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://chayabrava.pe/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
   <meta property="og:site_name" content="Chaya Brava">
   <meta property="og:title" content="Chaya Brava | Agencia de branding, audiovisual y páginas web en Perú">
   <meta property="og:description" content="Chaya Brava es una agencia peruana de diseño y audiovisual. Creamos branding, contenido audiovisual y páginas web que ayudan a tu negocio a crecer.">
+  <meta property="og:url" content="https://chayabrava.pe/">
   <meta property="og:image" content="https://chayabrava.pe/assets/img/marca/og-chaya-brava.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/answer-regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="assets/fonts/nexa-slab-regular.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" as="image" href="assets/img/hero/andes-fondo.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/pages/inicio.css">
+  <link rel="stylesheet" href="assets/css/challu.css">
+  <link rel="stylesheet" href="inicio/inicio.css">
 </head>
 <body class="page-inicio">
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -32,24 +33,24 @@
   </div>
 
   <div class="topbar">
-    <a href="contacto.html?servicio=branding"><span class="topbar__dot" aria-hidden="true"></span>Agenda abierta <span class="hide-sm">para proyectos </span>de Branding JULIO 2026</a>
+    <a href="contacto/index.html?servicio=branding"><span class="topbar__dot" aria-hidden="true"></span>Agenda abierta <span class="hide-sm">para proyectos </span>de Branding JULIO 2026</a>
   </div>
 
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="header__logo" href="index.html" aria-label="Chaya Brava — Inicio">
-        <img src="assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="86" height="49">
+        <img src="assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="100" height="58">
       </a>
       <nav class="nav" aria-label="Principal">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html" aria-current="page">Inicio</a></li>
-          <li><a class="nav__link" href="nosotros.html">Nosotros</a></li>
-          <li><a class="nav__link" href="branding.html">Branding</a></li>
-          <li><a class="nav__link" href="audiovisual.html">Audiovisual</a></li>
-          <li><a class="nav__link" href="paginas-web.html">Páginas Web</a></li>
+          <li><a class="nav__link" href="nosotros/index.html">Nosotros</a></li>
+          <li><a class="nav__link" href="branding/index.html">Branding</a></li>
+          <li><a class="nav__link" href="audiovisual/index.html">Audiovisual</a></li>
+          <li><a class="nav__link" href="paginas-web/index.html">Páginas Web</a></li>
         </ul>
       </nav>
-      <a class="header__cta" href="contacto.html">Contáctanos</a>
+      <a class="header__cta" href="contacto/index.html">Contáctanos</a>
       <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -59,11 +60,11 @@
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <ul class="mobile-menu__list">
       <li><a href="index.html" aria-current="page"><small>01</small>Inicio</a></li>
-      <li><a href="nosotros.html"><small>02</small>Nosotros</a></li>
-      <li><a href="branding.html"><small>03</small>Branding</a></li>
-      <li><a href="audiovisual.html"><small>04</small>Audiovisual</a></li>
-      <li><a href="paginas-web.html"><small>05</small>Páginas Web</a></li>
-      <li><a href="contacto.html"><small>06</small>Contáctanos</a></li>
+      <li><a href="nosotros/index.html"><small>02</small>Nosotros</a></li>
+      <li><a href="branding/index.html"><small>03</small>Branding</a></li>
+      <li><a href="audiovisual/index.html"><small>04</small>Audiovisual</a></li>
+      <li><a href="paginas-web/index.html"><small>05</small>Páginas Web</a></li>
+      <li><a href="contacto/index.html"><small>06</small>Contáctanos</a></li>
     </ul>
     <div class="mobile-menu__foot">
       <a href="tel:+51987270466">987 270 466</a>
@@ -75,76 +76,61 @@
     <!-- ================= HERO ================= -->
     <section class="hero" aria-labelledby="hero-title">
       <picture class="hero__bg" aria-hidden="true">
-        <source media="(max-width: 760px)" srcset="assets/img/hero/andes-fondo-mobile.webp">
-        <img src="assets/img/hero/andes-fondo.webp" alt="" width="2400" height="1701" fetchpriority="high">
+        <source media="(max-width: 760px)" srcset="assets/img/fondos/andes-fondo-movil.webp">
+        <img src="assets/img/fondos/andes-fondo.webp" alt="" width="2400" height="1701" fetchpriority="high">
       </picture>
-      <ul class="inca-rail" aria-label="Accesos rápidos"><li><a class="r-red" href="branding.html"><svg viewBox="0 0 58 58" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M10 8h38v42H10zM15 13v32h28V13zM20 18h18v22H20zM24 22v14h10V22zM27 25h4v8h-4z"/></svg><span>Branding</span></a></li><li><a class="r-yellow" href="audiovisual.html"><svg viewBox="0 0 58 58" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M10 8h38v42H10zM15 13v32h28V13zM20 18h18v22H20zM24 22v14h10V22zM27 25h4v8h-4z"/></svg><span>Audiovisual</span></a></li><li><a class="r-red" href="paginas-web.html"><svg viewBox="0 0 58 58" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M10 8h38v42H10zM15 13v32h28V13zM20 18h18v22H20zM24 22v14h10V22zM27 25h4v8h-4z"/></svg><span>Páginas web</span></a></li><li><a class="r-teal" href="contacto.html"><svg viewBox="0 0 58 58" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M10 8h38v42H10zM15 13v32h28V13zM20 18h18v22H20zM24 22v14h10V22zM27 25h4v8h-4z"/></svg><span>Contáctanos</span></a></li></ul>
+      <ul class="inca-rail" aria-label="Accesos rápidos">
+        <li><a class="r-red" href="branding/index.html"><svg viewBox="0 0 104 104" aria-hidden="true"><path fill="#fff" d="M46.99 42.71H56.57V61.7H46.99Z"/><path fill="#fff" d="M27.98 23.92H75.58V80.5H27.98ZM75.58 14.34L27.98 14.34L19.3 14.34L18.4 14.34L18.4 90.08L19.3 90.08L27.98 90.08L75.58 90.08L85.16 90.08L85.16 80.5L85.16 23.92L85.16 14.34L75.58 14.34"/><path fill="#fff" d="M42.06 37.88H61.51V66.53H42.06ZM71.09 75.75L71.09 66.53L71.09 37.88L71.09 29.05L71.09 28.3L42.06 28.3L32.48 28.3L32.48 37.88L32.48 66.53L32.48 75L32.48 76.11L71.09 76.11L71.09 75.75"/></svg><span>Branding</span></a></li>
+        <li><a class="r-yellow" href="audiovisual/index.html"><svg viewBox="0 0 104 104" aria-hidden="true"><path fill="#fff" d="M46.99 42.71H56.57V61.7H46.99Z"/><path fill="#fff" d="M27.98 23.92H75.58V80.5H27.98ZM75.58 14.34L27.98 14.34L19.3 14.34L18.4 14.34L18.4 90.08L19.3 90.08L27.98 90.08L75.58 90.08L85.16 90.08L85.16 80.5L85.16 23.92L85.16 14.34L75.58 14.34"/><path fill="#fff" d="M42.06 37.88H61.51V66.53H42.06ZM71.09 75.75L71.09 66.53L71.09 37.88L71.09 29.05L71.09 28.3L42.06 28.3L32.48 28.3L32.48 37.88L32.48 66.53L32.48 75L32.48 76.11L71.09 76.11L71.09 75.75"/></svg><span>Audiovisual</span></a></li>
+        <li><a class="r-red" href="nosotros/index.html"><svg viewBox="0 0 104 104" aria-hidden="true"><path fill="#fff" d="M46.99 42.71H56.57V61.7H46.99Z"/><path fill="#fff" d="M27.98 23.92H75.58V80.5H27.98ZM75.58 14.34L27.98 14.34L19.3 14.34L18.4 14.34L18.4 90.08L19.3 90.08L27.98 90.08L75.58 90.08L85.16 90.08L85.16 80.5L85.16 23.92L85.16 14.34L75.58 14.34"/><path fill="#fff" d="M42.06 37.88H61.51V66.53H42.06ZM71.09 75.75L71.09 66.53L71.09 37.88L71.09 29.05L71.09 28.3L42.06 28.3L32.48 28.3L32.48 37.88L32.48 66.53L32.48 75L32.48 76.11L71.09 76.11L71.09 75.75"/></svg><span>Nosotros</span></a></li>
+        <li><a class="r-teal" href="paginas-web/index.html"><svg viewBox="0 0 104 104" aria-hidden="true"><path fill="#fff" d="M46.99 42.71H56.57V61.7H46.99Z"/><path fill="#fff" d="M27.98 23.92H75.58V80.5H27.98ZM75.58 14.34L27.98 14.34L19.3 14.34L18.4 14.34L18.4 90.08L19.3 90.08L27.98 90.08L75.58 90.08L85.16 90.08L85.16 80.5L85.16 23.92L85.16 14.34L75.58 14.34"/><path fill="#fff" d="M42.06 37.88H61.51V66.53H42.06ZM71.09 75.75L71.09 66.53L71.09 37.88L71.09 29.05L71.09 28.3L42.06 28.3L32.48 28.3L32.48 37.88L32.48 66.53L32.48 75L32.48 76.11L71.09 76.11L71.09 75.75"/></svg><span>Páginas web</span></a></li>
+      </ul>
 
       <div class="container hero__inner">
         <div class="hero__copy">
           <h1 class="hero__title" id="hero-title">
-            <span class="hero__kicker display" data-split>Una mano peruana para</span>
-            <span class="hero__big display reveal-split"><span class="split-line" style="--d:.15s"><span>Tu marca</span></span><svg class="hero__g" viewBox="0 0 100 100" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="square" d="M93.5 26V6.5h-87v87h87V46.5h-47v25"/></svg></span>
+            <span class="hero__kicker" data-split>Una mano peruana para</span>
+            <span class="hero__big"><span class="hero__big-text" data-split>Tu marca</span><img class="hero__g" src="assets/img/grecas/espiral-amarilla.svg" alt="" width="84" height="87"></span>
           </h1>
-          <p class="hero__text reveal" style="--d:.45s">Somos una agencia de diseño con la única finalidad de ayudarte a crecer en tu negocio.</p>
-          <div class="hero__actions reveal" style="--d:.6s">
-            <a class="btn" href="contacto.html" data-magnetic>Cotizar ahora <svg class="arrow" viewBox="0 0 28 16" width="22" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></a>
-            <a class="hero__play" href="#soluciones"><span aria-hidden="true">↓</span> Conoce lo que hacemos</a>
-          </div>
+          <p class="hero__text reveal" style="--d:.4s">Somos una agencia de diseño con la única finalidad de ayudarte a crecer en tu negocio.</p>
+          <a class="btn hero__btn reveal" style="--d:.55s" href="contacto/index.html" data-magnetic>Cotizar ahora</a>
         </div>
-
         <div class="hero__visual" aria-hidden="true">
-          <div class="hero__glow"></div>
-          <img class="hero__alpaca" src="assets/img/hero/alpaca-vr.webp" alt="" width="797" height="960">
-          <span class="hero__chip hero__chip--1">Branding</span>
-          <span class="hero__chip hero__chip--2">Audiovisual</span>
-          <span class="hero__chip hero__chip--3">Web</span>
+          <img class="hero__alpaca" src="assets/img/personajes/alpaca-vr.webp" alt="" width="588" height="882">
         </div>
       </div>
 
-      <div class="container">
-        <ul class="stats" aria-label="Chaya Brava en cifras">
-          <li><strong><span data-count="10">10</span> <small>años</small></strong><span>Experiencia</span></li>
-          <li><strong><span data-count="15">15</span>+</strong><span>Clientes</span></li>
-          <li><strong><span data-count="150">150</span>+</strong><span>Proyectos</span></li>
-          <li><strong><span data-count="100">100</span>%</strong><span>Compromiso</span></li>
+      <div class="hero__stats-wrap">
+        <ul class="stats hero__stats" aria-label="Chaya Brava en cifras">
+          <li class="stat"><strong><span data-count="10">10</span> <small>años</small></strong><span>Experiencia</span></li>
+          <li class="stat"><strong><span data-count="15">15</span> +</strong><span>Clientes</span></li>
+          <li class="stat"><strong><span data-count="150">150</span>+</strong><span>Proyectos</span></li>
+          <li class="stat"><strong><span data-count="100">100</span>%</strong><span>Proyectos</span></li>
         </ul>
       </div>
     </section>
 
     <!-- ================= SOLUCIONES ================= -->
-    <section class="section section--brick solutions" id="soluciones" aria-labelledby="sol-title">
+    <section class="solutions bg-brick" id="soluciones" aria-labelledby="sol-title">
       <div class="container solutions__inner">
-        <h2 class="display h-md solutions__title" id="sol-title" data-split>Soluciones<br>creativas<br>para marcas<br>que crecen</h2>
+        <h2 class="display solutions__title" id="sol-title" data-split>Soluciones<br>creativas<br>para marcas<br>que crecen</h2>
         <ul class="solutions__list">
-          <li class="solution solution--red reveal" style="--d:0.00s">
-            <a href="branding.html">
-              <div class="solution__media"><img src="assets/img/proyectos/sinchi-papeleria.webp" alt="" width="885" height="590" loading="lazy"></div>
-              <div class="solution__label">
-                <h3 class="display">Branding</h3>
-                <p>Construimos marcas sólidas, memorables y con identidad.</p>
-                <span class="solution__more" aria-hidden="true">Ver servicio <svg class="arrow" viewBox="0 0 28 16" width="22" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span>
-              </div>
+          <li class="solution solution--red reveal" style="--d:0s">
+            <a href="branding/index.html">
+              <div class="solution__media"><img src="assets/img/proyectos/sinchi-brochure.webp" alt="" width="628" height="354" loading="lazy"></div>
+              <div class="solution__label"><h3 class="display">Branding</h3><p>Construimos marcas sólidas, memorables y con identidad.</p></div>
             </a>
           </li>
-          <li class="solution solution--yellow reveal" style="--d:0.12s">
-            <a href="audiovisual.html">
-              <div class="solution__media"><img src="assets/img/proyectos/revista-estreno.webp" alt="" width="978" height="691" loading="lazy"></div>
-              <div class="solution__label">
-                <h3 class="display">Audiovisual</h3>
-                <p>Historias que conectan, inspiran y posicionan tu marca.</p>
-                <span class="solution__more" aria-hidden="true">Ver servicio <svg class="arrow" viewBox="0 0 28 16" width="22" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span>
-              </div>
+          <li class="solution solution--yellow reveal" style="--d:.12s">
+            <a href="audiovisual/index.html">
+              <div class="solution__media"><img src="assets/img/servicios/produccion-video.webp" alt="" width="848" height="477" loading="lazy"></div>
+              <div class="solution__label"><h3 class="display">Audiovisual</h3><p>Historias que conectan, inspiran y posicionan tu marca.</p></div>
             </a>
           </li>
-          <li class="solution solution--teal reveal" style="--d:0.24s">
-            <a href="paginas-web.html">
-              <div class="solution__media"><img src="assets/img/proyectos/web-laptop.webp" alt="" width="885" height="575" loading="lazy"></div>
-              <div class="solution__label">
-                <h3 class="display">Páginas web</h3>
-                <p>Sitios modernos, estratégicos y listos para vender.</p>
-                <span class="solution__more" aria-hidden="true">Ver servicio <svg class="arrow" viewBox="0 0 28 16" width="22" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span>
-              </div>
+          <li class="solution solution--teal reveal" style="--d:.24s">
+            <a href="paginas-web/index.html">
+              <div class="solution__media"><img src="assets/img/proyectos/selecto-consultores-web.webp" alt="" width="1200" height="780" loading="lazy"></div>
+              <div class="solution__label"><h3 class="display">Páginas web</h3><p>Sitios modernos y estratégicos.</p></div>
             </a>
           </li>
         </ul>
@@ -153,99 +139,50 @@
 
     <!-- ================= RAÍCES ================= -->
     <section class="roots" aria-labelledby="roots-title">
-      <div class="roots__media" aria-hidden="true"><img src="assets/img/texturas/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
+      <div class="roots__media" aria-hidden="true"><img src="assets/img/fondos/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
       <div class="container roots__inner">
-        <h2 class="display h-lg roots__title" id="roots-title" data-split>Creatividad<br>con raíces<br><span class="t-red">peruanas</span></h2>
+        <h2 class="display roots__title" id="roots-title" data-split>Creatividad<br>con raíces<br><span class="t-flag">peruanas</span></h2>
         <div class="roots__text reveal reveal--right">
           <p>En Chaya Brava nos gusta ayudar a las marcas a crecer, renovarse y mostrar su mejor versión. Somos una agencia de diseño y audiovisual que fusiona la identidad peruana con la visión del mundo digital para ayudar a las empresas a comunicar, posicionarse y crecer.</p>
-          <a class="link-arrow" href="nosotros.html">Conocer más <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></a>
+          <a class="link-arrow" href="nosotros/index.html">Conocer más <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></a>
         </div>
       </div>
     </section>
 
-    <!-- ================= PROYECTOS ================= -->
-    <section class="section section--light projects" id="proyectos" aria-labelledby="proj-title">
-      <div class="container projects__head">
-        <h2 class="projects__eyebrow" id="proj-title">Proyectos destacados</h2>
-        <div class="projects__controls">
-          <div class="projects__progress" aria-hidden="true"><span></span></div>
-          <button class="projects__btn" type="button" data-dir="-1" aria-label="Proyecto anterior"><svg viewBox="0 0 28 16" aria-hidden="true"><path d="M28 8H3M10 1L3 8l7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></button>
-          <button class="projects__btn" type="button" data-dir="1" aria-label="Proyecto siguiente"><svg viewBox="0 0 28 16" aria-hidden="true"><path d="M0 8h25M18 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></button>
-        </div>
+    <!-- ================= PROYECTOS DESTACADOS ================= -->
+    <section class="featured" id="proyectos" aria-labelledby="feat-title">
+      <div class="container">
+        <h2 class="featured__eyebrow" id="feat-title">Proyectos destacados</h2>
       </div>
-      <div class="projects__viewport" tabindex="0" aria-label="Carrusel de proyectos; usa las flechas para desplazarte">
-        <ul class="projects__track">
-          <li class="project">
-            <a href="branding.html#casos" class="project__link" draggable="false">
-              <div class="project__media"><img src="assets/img/proyectos/sinchi-papeleria.webp" alt="Proyecto Sinchi: Branding · Papelería corporativa" width="885" height="590" loading="lazy" draggable="false"></div>
-              <div class="project__info"><span>Branding · Papelería corporativa</span><strong>Sinchi</strong></div>
-            </a>
-          </li>
-          <li class="project">
-            <a href="branding.html#casos" class="project__link" draggable="false">
-              <div class="project__media"><img src="assets/img/proyectos/el-taita.webp" alt="Proyecto El Taita: Branding · Packaging" width="876" height="657" loading="lazy" draggable="false"></div>
-              <div class="project__info"><span>Branding · Packaging</span><strong>El Taita</strong></div>
-            </a>
-          </li>
-          <li class="project">
-            <a href="paginas-web.html#proyectos" class="project__link" draggable="false">
-              <div class="project__media"><img src="assets/img/proyectos/web-laptop.webp" alt="Proyecto Sitio corporativo: Páginas web" width="885" height="575" loading="lazy" draggable="false"></div>
-              <div class="project__info"><span>Páginas web</span><strong>Sitio corporativo</strong></div>
-            </a>
-          </li>
-          <li class="project">
-            <a href="audiovisual.html#galeria" class="project__link" draggable="false">
-              <div class="project__media"><img src="assets/img/proyectos/revista-estreno.webp" alt="Proyecto Estreno al aire libre: Audiovisual · Editorial" width="978" height="691" loading="lazy" draggable="false"></div>
-              <div class="project__info"><span>Audiovisual · Editorial</span><strong>Estreno al aire libre</strong></div>
-            </a>
-          </li>
-          <li class="project">
-            <a href="branding.html#casos" class="project__link" draggable="false">
-              <div class="project__media"><img src="assets/img/proyectos/sinchi-catalogo.webp" alt="Proyecto Catálogo Sinchi: Diseño editorial" width="452" height="771" loading="lazy" draggable="false"></div>
-              <div class="project__info"><span>Diseño editorial</span><strong>Catálogo Sinchi</strong></div>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="container container--wide featured__list">
+        <li class="reveal" style="--d:0s"><a class="featured__item" href="branding/index.html#proyectos"><img src="assets/img/proyectos/sinchi-papeleria.webp" alt="Sinchi: catálogo, brochure y papelería" width="885" height="590" loading="lazy"><span class="featured__tag">Sinchi<small>Branding · Papelería</small></span></a></li>
+        <li class="reveal" style="--d:.12s"><a class="featured__item" href="branding/index.html#proyectos"><img src="assets/img/proyectos/el-taita.webp" alt="El Taita: empaques y uniforme" width="881" height="661" loading="lazy"><span class="featured__tag">El Taita<small>Branding · Merchandising</small></span></a></li>
+        <li class="reveal" style="--d:.24s"><a class="featured__item" href="branding/index.html#proyectos"><img src="assets/img/proyectos/tiendas-chan.webp" alt="Tiendas Chan: merchandising y papelería" width="846" height="476" loading="lazy"><span class="featured__tag">Tiendas Chan<small>Manual de marca · Merchandising</small></span></a></li>
+      </ul>
     </section>
 
     <!-- ================= DE LA IDEA AL IMPACTO ================= -->
-    <section class="section section--light impact" aria-labelledby="impact-title">
+    <section class="impact" aria-labelledby="impact-title">
       <div class="container impact__inner">
-        <h2 class="display h-md impact__title" id="impact-title" data-split>De la idea<br>al <span class="t-red t-italic">impacto</span></h2>
+        <h2 class="display impact__title" id="impact-title" data-split>De la idea<br>al <span class="t-red t-italic">impacto</span></h2>
         <ol class="impact__steps">
-          <li class="impact__step reveal" style="--d:0.00s">
-            <div class="impact__icon"><svg class="inca inca--red" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h100v100H0zM15 15v70h70V15zM28 28h44v44H28zM41 41v18h18V41z"/></svg></div>
-            <h3 class="display">Estrategia</h3>
-            <p>Escuchamos tu negocio, analizamos tu mercado y definimos hacia dónde va tu marca.</p>
-          </li>
-          <li class="impact__step reveal" style="--d:0.12s">
-            <div class="impact__icon"><svg class="inca inca--yellow" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h100v100H0zM15 15v70h70V15zM28 28h44v44H28zM41 41v18h18V41z"/></svg></div>
-            <h3 class="display">Creatividad</h3>
-            <p>Convertimos la estrategia en ideas, conceptos visuales y mensajes con identidad.</p>
-          </li>
-          <li class="impact__step reveal" style="--d:0.24s">
-            <div class="impact__icon"><svg class="inca inca--teal" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h100v100H0zM15 15v70h70V15zM28 28h44v44H28zM41 41v18h18V41z"/></svg></div>
-            <h3 class="display">Producción</h3>
-            <p>Diseñamos, filmamos y programamos cada pieza con detalle de artesano.</p>
-          </li>
-          <li class="impact__step reveal" style="--d:0.36s">
-            <div class="impact__icon"><svg class="inca inca--red" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h100v100H0zM15 15v70h70V15zM28 28h44v44H28zM41 41v18h18V41z"/></svg></div>
-            <h3 class="display">Resultado</h3>
-            <p>Lanzamos, medimos y optimizamos para que tu marca crezca de verdad.</p>
-          </li>
+          <li class="reveal" style="--d:0s"><svg class="impact__icon" style="color:var(--c-red)" viewBox="0 0 122 122" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h122v122H0zM18 18v86h86V18zM31 31h60v60H31zM45 45v32h32V45z"/></svg><h3 class="display">Estrategia</h3></li>
+          <li class="reveal" style="--d:.12s"><svg class="impact__icon" style="color:var(--c-yellow-2)" viewBox="0 0 122 122" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h122v122H0zM18 18v86h86V18zM31 31h60v60H31zM45 45v32h32V45z"/></svg><h3 class="display">Creatividad</h3></li>
+          <li class="reveal" style="--d:.24s"><svg class="impact__icon" style="color:var(--c-teal)" viewBox="0 0 122 122" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h122v122H0zM18 18v86h86V18zM31 31h60v60H31zM45 45v32h32V45z"/></svg><h3 class="display">Producción</h3></li>
+          <li class="reveal" style="--d:.36s"><svg class="impact__icon" style="color:var(--c-red)" viewBox="0 0 122 122" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h122v122H0zM18 18v86h86V18zM31 31h60v60H31zM45 45v32h32V45z"/></svg><h3 class="display">Resultado</h3></li>
         </ol>
       </div>
     </section>
 
-    <section class="cta" aria-labelledby="cta-title">
-      <div class="cta__fret" aria-hidden="true"></div>
-      <div class="cta__media" aria-hidden="true"><img src="assets/img/servicios/boceto-andino.webp" alt="" loading="lazy" width="1548" height="1016"></div>
-      <div class="container cta__inner">
-        <h2 class="display cta__title" id="cta-title" data-split>Hablemos de<br><span class="t-yellow">tu proyecto</span></h2>
-        <div class="cta__text reveal" style="--d:.2s">
+    <!-- ================= CTA ================= -->
+    <section class="cta-home" aria-labelledby="cta-title">
+      <div class="cta-home__fret" aria-hidden="true"></div>
+      <div class="cta-home__media" aria-hidden="true"><img src="assets/img/servicios/boceto-andino.webp" alt="" width="1548" height="1016" loading="lazy"></div>
+      <div class="container cta-home__inner">
+        <h2 class="display cta-home__title" id="cta-title" data-split>Hablemos de<br><span class="t-yellow">tu proyecto</span></h2>
+        <div class="cta-home__text reveal" style="--d:.2s">
           <p>Cuéntanos tu idea y creemos juntos una solución a la altura de tu marca.</p>
-          <a class="btn btn--ghost btn--skew" href="contacto.html" data-magnetic><span>Contáctanos</span></a>
+          <a class="btn-skew" href="contacto/index.html">Contáctanos</a>
         </div>
       </div>
     </section>
@@ -254,30 +191,30 @@
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <img src="assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="110" height="63" loading="lazy">
-        <p>Agencia de marketing digital con alma peruana. Transformamos marcas en referentes visuales y digitales con creatividad y pasión.</p>
+        <img src="assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="126" height="72" loading="lazy">
+        <p>Agencia de Marketing digital con alma peruana. Transformamos marcas en referentes visuales y digitales con creatividad y pasión.</p>
         <ul class="social" aria-label="Redes sociales"><li><a href="https://www.facebook.com/chayabrava" target="_blank" rel="noopener" aria-label="Facebook de Chaya Brava"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg></a></li><li><a href="https://www.instagram.com/chayabrava" target="_blank" rel="noopener" aria-label="Instagram de Chaya Brava"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a></li><li><a href="https://www.youtube.com/@chayabrava" target="_blank" rel="noopener" aria-label="YouTube de Chaya Brava"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg></a></li><li><a href="https://www.tiktok.com/@chayabrava" target="_blank" rel="noopener" aria-label="TikTok de Chaya Brava"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.3 3c.3 2.3 1.7 3.8 4 4v3.2a7 7 0 0 1-4-1.2v6.3A5.6 5.6 0 1 1 10.7 9.7V13a2.3 2.3 0 1 0 2.3 2.3V3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/chayabrava" target="_blank" rel="noopener" aria-label="LinkedIn de Chaya Brava"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 9h3v11H5zM6.5 3.8a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM10 9h2.9v1.5c.4-.8 1.5-1.7 3.1-1.7 3.3 0 3.9 2.2 3.9 5V20h-3v-5.4c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20h-3z"/></svg></a></li></ul>
       </div>
       <div>
-        <h2 class="footer__title">Servicios</h2>
+        <h2 class="footer__title" style="--w:165px">Servicios</h2>
         <ul class="footer__links">
-          <li><a href="branding.html">Branding e identidad</a></li>
-          <li><a href="audiovisual.html#social">Social media</a></li>
-          <li><a href="audiovisual.html#fotografia">Fotografía</a></li>
-          <li><a href="paginas-web.html">Páginas web</a></li>
+          <li><a href="branding/index.html">Branding y Identidad</a></li>
+          <li><a href="audiovisual/index.html#produccion">Social Media</a></li>
+          <li><a href="audiovisual/index.html#galeria">Fotografía</a></li>
+          <li><a href="paginas-web/index.html">Páginas Web</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="footer__title">Empresa</h2>
+        <h2 class="footer__title" style="--w:103px">Empresa</h2>
         <ul class="footer__links">
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="nosotros.html#clientes">Clientes</a></li>
-          <li><a href="nosotros.html#blog">Blog</a></li>
-          <li><a href="contacto.html">Contactos</a></li>
+          <li><a href="nosotros/index.html">Nosotros</a></li>
+          <li><a href="index.html#proyectos">Clientes</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contacto/index.html">Contactos</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="footer__title">Contáctanos</h2>
+        <h2 class="footer__title" style="--w:205px">Contáctanos</h2>
         <dl class="footer__contact">
           <dt>Teléfonos</dt>
           <dd><a href="tel:+51987270466">987 270 466</a></dd>
@@ -286,22 +223,17 @@
         </dl>
       </div>
     </div>
-    <div class="container footer__bottom">
-      <span>© <span data-year>2026</span> Chaya Brava. Hecho con orgullo en Perú.</span>
-      <a href="#top">Volver arriba ↑</a>
-    </div>
   </footer>
 
   <a class="wa-float" href="https://wa.me/51987270466" data-wa="" aria-label="Escríbenos por WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M3.6 20.4l1.2-4.1a8.6 8.6 0 1 1 3.3 3z"/><path fill="currentColor" d="M8.9 7.4c.3-.3.7-.3.9 0l1 1.6c.2.3.1.7-.1.9l-.6.6c.6 1.3 1.7 2.4 3 3l.6-.6c.3-.2.6-.3.9-.1l1.6 1c.3.2.3.6 0 .9l-.8.8c-.6.6-1.6.7-2.4.3a10.8 10.8 0 0 1-5-5c-.4-.8-.3-1.8.3-2.4z"/></svg>
-    <span class="wa-float__tip">¿Hablamos por WhatsApp?</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41"/></svg>
   </a>
   <button class="to-top" type="button" aria-label="Volver arriba">
-    <svg viewBox="0 0 44 44" width="44" height="44" aria-hidden="true" style="position:absolute;inset:0;width:44px;transform:rotate(-90deg)"><circle cx="22" cy="22" r="20" fill="none" stroke="#fcbf00" stroke-width="2"/></svg>
     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
   </button>
 
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/pages/inicio.js" defer></script>
+  <script src="assets/js/challu.js" defer></script>
+  <script src="inicio/inicio.js" defer></script>
 </body>
 </html>

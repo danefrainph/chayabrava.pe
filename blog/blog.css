@@ -1,0 +1,47 @@
+/* ==========================================================================
+   BLOG — artículos de Chaya Brava (enlazado desde el pie de página)
+   ========================================================================== */
+.bl-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: #000; color: #fff; text-align: center;
+  padding: calc(var(--header-h) + clamp(40px, 5vw, 70px)) 0 clamp(60px, 6vw, 86px);
+}
+.bl-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .06; background: url("../assets/img/texturas/patron-andino.svg") 0 0 / clamp(560px, 55vw, 780px) auto repeat; }
+.bl-hero h1 { font-size: clamp(48px, 7vw, 100px); margin-bottom: 18px; }
+.bl-hero p { max-width: 620px; margin: 0 auto; font-size: clamp(16px, 1.5vw, 21px); line-height: 1.3; }
+.bl-hero + .greca-band { margin-top: 0; }
+
+.bl-list { --tint: var(--c-cream); padding: clamp(60px, 6vw, 90px) 0 clamp(70px, 7vw, 100px); }
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.2vw, 30px); }
+.post__card { display: flex; flex-direction: column; height: 100%; width: 100%; text-align: left; border-radius: var(--radius-lg); overflow: hidden; background: #fff; transition: transform .5s var(--ease-out), box-shadow .5s; }
+.post__card:hover { transform: translateY(-8px); box-shadow: var(--shadow-1); }
+.post__media { aspect-ratio: 16 / 10; overflow: hidden; }
+.post__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
+.post__card:hover .post__media img { transform: scale(1.06); }
+.post__body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 26px; }
+.post__meta { display: flex; gap: 14px; font-size: 13px; color: #7a7168; margin-bottom: 12px; }
+.post__meta span:first-child { color: var(--c-red); font-weight: 700; }
+.post h3 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 1.9vw, 28px); line-height: 1.02; margin-bottom: 12px; color: #000; }
+.post p { font-size: 15px; line-height: 1.35; color: #4a443e; margin-bottom: 18px; }
+.post__more { margin-top: auto; display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-display); text-transform: uppercase; font-size: 16px; color: var(--c-red); }
+.post__more svg { width: 22px; transition: transform .4s var(--ease-out); }
+.post__card:hover .post__more svg { transform: translateX(6px); }
+
+/* Lector de artículos (ventana) */
+.reader {
+  width: min(760px, 92vw); max-height: 88vh; padding: clamp(30px, 5vw, 56px);
+  border: 0; border-radius: var(--radius-lg); background: #fff; color: var(--c-ink);
+  box-shadow: var(--shadow-2);
+}
+.reader::backdrop { background: rgba(0,0,0,.78); backdrop-filter: blur(6px); }
+.reader[open] { animation: reader-in .5s var(--ease-out); }
+@keyframes reader-in { from { opacity: 0; transform: translateY(30px) scale(.98); } }
+.reader__close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--c-beige); transition: background .3s, transform .3s; }
+.reader__close:hover { background: var(--c-red); color: #fff; transform: rotate(90deg); }
+.reader h2 { font-size: clamp(30px, 3.6vw, 46px); margin-bottom: 22px; }
+.reader p { margin-bottom: 16px; line-height: 1.55; }
+.reader .post__meta { margin-bottom: 14px; }
+.reader .btn { margin-top: 10px; }
+
+@media (max-width: 960px) { .posts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .posts { grid-template-columns: 1fr; } }
