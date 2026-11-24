@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chayabrava.pe/sitemap.xml
