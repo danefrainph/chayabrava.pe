@@ -115,3 +115,32 @@
   .a-badges { gap: 14px; }
   .a-badges strong { min-width: 62px; height: 50px; font-size: 25px; }
 }
+
+/* ---------- Paquetes de audiovisual (sin precio) ---------- */
+.a-packs .packs__inner { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); }
+.a-packs__head { display: grid; justify-items: start; gap: clamp(30px, 4vw, 60px); }
+.a-packs__custom { font-size: 17px; }
+.a-packs .packs__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 26px); }
+.a-packs .pack { color: var(--c-red); }
+.a-packs .pack__name { text-align: center; padding: 22px 10px 10px; font-size: clamp(28px, 2.8vw, 40px); }
+.a-packs .pack ul { padding: 6px 16px 14px 20px; gap: 8px; font-size: 12.5px; }
+.a-packs .pack__time { text-align: center; padding: 0 10px 10px; font-family: var(--f-display); text-transform: uppercase; font-size: clamp(14px, 1.3vw, 18px); }
+.a-packs .pack__foot { display: block; transition: background .3s; }
+.a-packs .pack__foot:hover { background: #000; }
+@media (max-width: 1100px) {
+  .a-packs .packs__inner { grid-template-columns: 1fr; }
+  .a-packs__head { justify-items: center; text-align: center; }
+  .a-packs .packs__grid { width: 100%; max-width: 820px; margin-inline: auto; }
+}
+@media (max-width: 760px) {
+  .a-packs .packs__grid { grid-template-columns: 1fr; max-width: 360px; gap: 18px; }
+  .a-packs .pack ul { font-size: 13px; }
+}
+
+/* === REVISIÓN 3: títulos en contorno superpuestos al título en celular === */
+@media (max-width: 640px) {
+  .a-hero__copy { padding-top: 44px; }
+  .a-hero__ghost--top { top: 8px; }
+  .a-hero__ghost--bottom { display: block; top: 78px; }
+}
+/* === FIN REVISIÓN 3 === */

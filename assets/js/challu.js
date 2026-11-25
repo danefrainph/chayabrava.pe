@@ -27,7 +27,7 @@
     {
       id: "branding",
       q: "¿Cuánto tiempo toma un proyecto de branding?",
-      a: `Según el paquete: el <strong>Básico</strong> se entrega en 7 días, el <strong>Intermedio</strong> en 14 días y el <strong>Avanzado</strong> en 2 meses, porque incluye análisis estratégico, manual completo y prototipo web. <a href="${url("branding/index.html#paquetes")}">Ver paquetes de branding</a>`,
+      a: `Según el paquete: el <strong>Básico</strong> se entrega en 7 a 10 días, el <strong>Intermedio</strong> en 14 días, el <strong>Avanzado</strong> en 2 meses y el <strong>Premium</strong> en 3 meses, porque incluye investigación, estrategia y manual completo. <a href="${url("branding/index.html#paquetes")}">Ver paquetes de branding</a>`,
     },
     {
       id: "renovar",
@@ -50,9 +50,9 @@
   const EXTRA = {
     saludo: "¡Alliyachu! 😊 ¿En qué te ayudo? Puedes escribirme o elegir una de las preguntas.",
     gracias: "¡De nada! Aquí estaré si necesitas algo más. 🦙",
-    precioBranding: `Nuestros paquetes de branding: <strong>Básico S/ 790</strong>, <strong>Intermedio S/ 1490</strong> y <strong>Avanzado S/ 2990</strong>. <a href="${url("branding/index.html#paquetes")}">Ver qué incluye cada uno</a>`,
+    precioBranding: `Tenemos cuatro paquetes de branding: <strong>Básico</strong>, <strong>Intermedio</strong>, <strong>Avanzado</strong> y <strong>Premium</strong>, además de un servicio personalizado. El precio lo cotizamos según tu marca. <a href="${url("branding/index.html#paquetes")}">Ver qué incluye cada uno</a>`,
     precioWeb: `Tenemos paquetes desde <strong>S/ 790</strong> hasta el <strong>Premium de S/ 3500</strong>. <a href="${url("paginas-web/index.html#paquetes")}">Ver paquetes</a>`,
-    audiovisual: `Hacemos fotografía de producto e inmobiliaria, videos publicitarios, corporativos y para hoteles y restaurantes. <a href="${url("audiovisual/index.html")}">Ver audiovisual</a>`,
+    audiovisual: `Hacemos fotografía de producto e inmobiliaria, videos publicitarios, corporativos y para hoteles y restaurantes. Tenemos paquetes <strong>Básico</strong>, <strong>Intermedio</strong> y <strong>Avanzado</strong>. <a href="${url("audiovisual/index.html#paquetes")}">Ver paquetes de audiovisual</a>`,
     contacto: `Escríbenos al <strong>987 270 466</strong> o a <strong>chayabrava@gmail.com</strong>.<br><a class="challu__wa" href="${waLink("Hola Chaya Brava, vengo de la web y quiero información.")}" target="_blank" rel="noopener">Escribir por WhatsApp</a>`,
     noSe: `Mmm, esa no me la sé 🤔. Elige una de las preguntas frecuentes o escríbele a nuestro equipo:<br><a class="challu__wa" href="${waLink("Hola Chaya Brava, tengo una consulta.")}" target="_blank" rel="noopener">Escribir por WhatsApp</a>`,
   };
@@ -100,26 +100,30 @@
   };
 
   /* ---------- Interfaz ---------- */
+  const greca = url("assets/img/grecas/greca-doble-roja.svg");
   const el = document.createElement("div");
   el.className = "challu";
   el.innerHTML = `
     <div class="challu__panel" id="challu-panel" role="dialog" aria-modal="false" aria-labelledby="challu-name">
       <div class="challu__head">
-        <span class="challu__avatar" aria-hidden="true"><img src="${img}" alt="" width="60" height="62"></span>
-        <div>
-          <p class="challu__name" id="challu-name">Challu</p>
-          <p class="challu__status">Asistente de Chaya Brava</p>
-        </div>
+        <img src="${greca}" alt="" width="40" height="30">
+        <p class="challu__name" id="challu-name">Challu AI</p>
+        <img src="${greca}" alt="" width="40" height="30">
         <button class="challu__close" type="button" aria-label="Cerrar chat">
           <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2.2"/></svg>
         </button>
       </div>
-      <div class="challu__log" role="log" aria-live="polite"></div>
+      <div class="challu__log" role="log" aria-live="polite">
+        <div class="challu__intro">
+          <span class="challu__avatar challu__avatar--big" aria-hidden="true"><img src="${img}" alt="" width="90" height="93"></span>
+          <p>Hola, soy Challu AI. Estoy aquí para responder tus consultas</p>
+        </div>
+      </div>
       <form class="challu__form" autocomplete="off">
         <label class="sr-only" for="challu-input">Escribe tu pregunta</label>
         <input class="challu__input" id="challu-input" type="text" placeholder="Escribe aquí" maxlength="200">
         <button class="challu__send" type="submit" aria-label="Enviar pregunta">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 2.4 2.9 9.6c-.8.3-.8 1.4 0 1.7l6.6 2.4 2.4 6.6c.3.8 1.4.8 1.7 0L21.6 2.4zM10.4 12.6 16.8 7.2l-5.4 6.4-1 3.3-1.2-3.3z"/></svg>
         </button>
       </form>
     </div>
@@ -132,54 +136,50 @@
   (wa ? wa.parentNode : document.body).insertBefore(el, wa || null);
 
   const launcher = el.querySelector(".challu__launcher");
-  const panel = el.querySelector(".challu__panel");
   const log = el.querySelector(".challu__log");
+  const intro = el.querySelector(".challu__intro");
   const form = el.querySelector(".challu__form");
   const input = el.querySelector(".challu__input");
 
   const faqBox = document.createElement("div");
   faqBox.className = "challu__faq";
   faqBox.innerHTML = FAQ.map((f) => `<button class="challu__chip" type="button" data-faq="${f.id}">${f.q}</button>`).join("");
+  log.appendChild(faqBox);
 
-  const scrollDown = () => { log.scrollTop = log.scrollHeight; };
+  const scrollTo = (node) => { log.scrollTop = Math.max(0, node.offsetTop - log.offsetTop - 8); };
   const addMsg = (html, who) => {
     const m = document.createElement("div");
     m.className = `challu__msg challu__msg--${who}`;
-    if (who === "user") m.textContent = html; else m.innerHTML = html;
-    log.insertBefore(m, faqBox.parentNode === log ? faqBox : null);
-    scrollDown();
+    if (who === "user") {
+      m.textContent = html;
+    } else {
+      m.innerHTML = `<span class="challu__avatar" aria-hidden="true"><img src="${img}" alt="" width="46" height="48"></span><div class="challu__text">${html}</div>`;
+    }
+    log.insertBefore(m, faqBox);
     return m;
   };
   let busy = false;
   const reply = (question, answer) => {
     if (busy) return;
     busy = true;
-    addMsg(question, "user");
+    el.classList.add("is-chatting");
+    intro.hidden = true;
+    const q = addMsg(question, "user");
     const typing = addMsg('<span class="challu__typing" aria-label="Challu está escribiendo"><i></i><i></i><i></i></span>', "bot");
-    typing.style.padding = "0";
+    scrollTo(q);
     setTimeout(() => {
-      typing.remove();
-      addMsg(answer, "bot");
-      log.appendChild(faqBox);   // las preguntas quedan siempre al final
-      scrollDown();
+      typing.querySelector(".challu__text").innerHTML = answer;
+      scrollTo(q);
       busy = false;
     }, reduceMotion ? 0 : 700);
   };
 
-  let started = false;
-  const start = () => {
-    if (started) return;
-    started = true;
-    addMsg("Alliyachu... soy <strong>Challu</strong> 👋 Te ayudo con las preguntas más frecuentes. Elige una o escríbeme.", "bot");
-    log.appendChild(faqBox);
-  };
-
   const setOpen = (open) => {
     el.classList.toggle("is-open", open);
+    document.documentElement.classList.toggle("challu-open", open);
     launcher.setAttribute("aria-expanded", String(open));
     launcher.setAttribute("aria-label", open ? "Cerrar chat con Challu" : "Abrir chat con Challu, asistente de preguntas frecuentes");
     if (open) {
-      start();
       el.classList.add("is-quiet");
       try { sessionStorage.setItem("cb-challu", "1"); } catch (e) {}
       const fine = window.matchMedia("(pointer: fine)").matches;

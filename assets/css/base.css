@@ -451,14 +451,12 @@ body.menu-open { overflow: hidden; }
 .footer__grid { display: grid; grid-template-columns: 1.3fr 1fr .74fr 1.8fr; gap: 24px; align-items: start; }
 .footer__brand img { width: clamp(110px, 9vw, 126px); margin-bottom: 14px; }
 .footer__brand p { max-width: 172px; font-size: 11px; line-height: 1.15; margin-bottom: 20px; }
-.social { display: flex; flex-wrap: wrap; gap: 6px; }
-.social a {
-  display: grid; place-items: center; width: 39px; height: 39px; border-radius: 7px;
-  background: var(--c-red); color: #fff;
-  transition: transform .35s var(--ease-out), background .3s, color .3s;
-}
-.social a:hover { transform: translateY(-4px) rotate(-6deg); background: var(--c-yellow); color: #000; }
-.social svg { width: 22px; height: 22px; }
+.social { display: flex; flex-wrap: wrap; gap: 10px; }
+.social a { position: relative; display: block; width: 46px; padding-bottom: 12px; transition: transform .35s var(--ease-out); }
+.social a::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 0; height: 5px; background: var(--c-yellow); transition: transform .35s var(--ease-out); }
+.social img { width: 100%; height: auto; }
+.social a:hover { transform: translateY(-4px) rotate(-4deg); }
+.social a:hover::after { transform: scaleX(.6); }
 .footer__title {
   display: block; width: var(--w, 165px); max-width: 100%;
   margin-bottom: 18px; padding-bottom: 6px;
@@ -561,3 +559,26 @@ body.menu-open { overflow: hidden; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal, .split-line > span { opacity: 1; transform: none; }
 }
+
+/* === REVISIÓN 5 (general): zonas de toque más grandes === */
+@media (max-width: 640px) {
+  .topbar a { min-height: var(--topbar-h); padding-inline: 10px; }
+  .mobile-menu__foot a { display: inline-block; padding: 10px 0; }
+}
+/* === FIN REVISIÓN 5 (general) === */
+
+/* === REVISIÓN 7: proyectos con foto y texto lado a lado en tablet === */
+@media (min-width: 641px) and (max-width: 960px) {
+  .project, .project--rev { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .project--rev .project__media { order: 2; }
+  .project h3 { font-size: 38px; }
+  .project__meta { grid-template-columns: 1fr; gap: 10px; }
+}
+/* === FIN REVISIÓN 7 === */
+
+/* Enlace "Ver página web" de los proyectos */
+.project__link { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 10px 22px; border-radius: 999px; background: var(--c-red); color: #fff; font-family: var(--f-display); text-transform: uppercase; font-size: 16px; transition: background .3s, transform .3s var(--ease-out); }
+.project__link::after { content: "→"; font-family: Arial, sans-serif; }
+.project__link:hover { background: #000; transform: translateY(-2px); }
+a.project__media { display: block; }
+.project__meta { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }

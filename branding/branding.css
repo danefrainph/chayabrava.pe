@@ -77,3 +77,64 @@
   .b-hero__cta .btn { white-space: nowrap; }
   .b-ribbon { transform: rotate(1.6deg); }
 }
+
+/* ---------- Paquetes sin precio (4 tarjetas) ---------- */
+.b-packs .packs__inner { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); }
+.b-packs__head { display: grid; justify-items: start; gap: clamp(30px, 4vw, 60px); }
+.b-packs__custom { font-size: 17px; }
+.b-packs .packs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 22px); }
+.b-packs .pack { color: var(--c-red); }
+.b-packs .pack__name { text-align: center; padding: 20px 10px 10px; font-size: clamp(28px, 2.6vw, 38px); }
+.b-packs .pack ul { padding: 6px 14px 14px 18px; gap: 7px; font-size: 11.5px; }
+.b-packs .pack__time { text-align: center; padding: 0 10px 10px; font-family: var(--f-display); text-transform: uppercase; font-size: clamp(14px, 1.3vw, 18px); }
+.b-packs .pack__foot { display: block; transition: background .3s, color .3s; }
+.b-packs .pack__foot:hover { background: #000; }
+.b-packs .pack--dark { background: var(--c-red-band); color: #fff; box-shadow: 0 0 0 3px #fff inset; }
+.b-packs .pack--dark .pack__foot { background: #fff; color: var(--c-red-band); }
+.b-packs .pack--dark .pack__foot:hover { background: var(--c-yellow); color: #000; }
+@media (max-width: 1100px) { .b-packs .packs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .b-packs .packs__grid { grid-template-columns: 1fr; } }
+
+/* Paquetes: tablet y celular */
+@media (max-width: 1100px) {
+  .b-packs .packs__inner { grid-template-columns: 1fr; }
+  .b-packs__head { justify-items: center; text-align: center; }
+  .b-packs .packs__grid { width: 100%; max-width: 640px; margin-inline: auto; }
+}
+@media (max-width: 640px) {
+  .b-packs .packs__grid { grid-template-columns: 1fr; max-width: 360px; gap: 18px; }
+  .b-packs .pack ul { font-size: 13px; gap: 9px; padding-inline: 22px; }
+  .b-packs .pack__name { font-size: 34px; }
+}
+
+/* === REVISIÓN 8: letra más grande en las listas de paquetes === */
+.b-packs .pack ul { font-size: 13px; gap: 8px; }
+/* === FIN REVISIÓN 8 === */
+
+/* === Paquetes de branding: apegados al diseño "SERVICIOS PAQUETS" === */
+.b-packs .packs__inner { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); align-items: stretch; }
+.b-packs__head { align-content: space-between; padding-block: 50px 10px; }
+.b-packs__custom { text-transform: none; font-size: clamp(18px, 1.7vw, 24px); }
+.b-packs__custom::before { border-color: var(--c-red-band); }
+.b-packs .packs__grid { gap: clamp(12px, 1.5vw, 22px); align-items: stretch; }
+.b-packs .packs__grid > li { display: flex; }
+.b-packs .pack { flex: 1; border-radius: 24px; }
+.b-packs .pack__name { padding: 24px 12px 14px; font-size: clamp(30px, 3.1vw, 44px); }
+.b-packs .pack ul { flex: 1; padding: 0 16px 14px 22px; gap: 9px; font-weight: 400; font-size: clamp(12.5px, 1.05vw, 15px); line-height: 1.15; }
+.b-packs .pack__time { text-align: left; padding: 0 16px 10px 22px; font-family: var(--f-body); text-transform: none; font-size: clamp(13px, 1.1vw, 15.5px); }
+.b-packs .pack__foot { font-size: clamp(20px, 1.9vw, 27px); text-transform: none; padding: 10px 8px 12px; }
+.b-packs .pack--dark { box-shadow: none; background: var(--c-red-flag); }
+.b-packs .pack--dark .pack__name { color: #fff; }
+.b-packs .pack--dark ul { font-weight: 700; font-size: clamp(11.5px, .95vw, 13.5px); }
+.b-packs .pack--dark .pack__time { font-weight: 700; }
+.b-packs .pack--dark .pack__foot { background: #fff; color: var(--c-red-flag); }
+@media (max-width: 1100px) {
+  .b-packs .packs__inner { grid-template-columns: 1fr; }
+  .b-packs__head { padding-block: 0; gap: 24px; }
+}
+/* === FIN === */
+.b-packs .packs__inner { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); }
+.b-packs .packs__title { font-size: clamp(40px, 4.9vw, 70px); }
+.b-packs .packs__title .split-line { white-space: nowrap; }
+.b-packs .pack__name { font-size: clamp(28px, 2.7vw, 40px); }
+@media (max-width: 1100px) { .b-packs .packs__inner { grid-template-columns: 1fr; } }

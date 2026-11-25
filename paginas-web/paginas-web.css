@@ -82,3 +82,14 @@
   .w-features__list { grid-template-columns: 1fr; }
   .w-packs .packs__grid { grid-template-columns: 1fr; max-width: 320px; }
 }
+
+/* Paquetes: tablet y celular centrados */
+@media (max-width: 1100px) {
+  .w-packs .packs__title { text-align: center; }
+  .w-packs .packs__grid { width: 100%; max-width: 640px; margin-inline: auto; }
+  .w-packs .pack ul { font-size: 12px; }
+}
+@media (max-width: 640px) {
+  .w-packs .packs__grid { grid-template-columns: 1fr; max-width: 340px; gap: 18px; }
+  .w-packs .pack ul { font-size: 13px; padding-inline: 22px; }
+}

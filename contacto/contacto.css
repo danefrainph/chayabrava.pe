@@ -110,3 +110,13 @@
   .c-corner--tl { width: 80px; height: 72px; }
   .c-corner--br { width: 80px; height: 72px; }
 }
+
+/* === REVISIÓN 5 (contacto): casilla "Acepto" más grande === */
+.consent input { width: 22px; height: 22px; }
+.consent input::after { width: 11px; height: 11px; }
+/* === FIN REVISIÓN 5 (contacto) === */
+
+/* === REVISIÓN 6 (contacto): textos pequeños más legibles === */
+.field__count { font-size: 12.5px; }
+.consent { font-size: 13px; }
+/* === FIN REVISIÓN 6 (contacto) === */
