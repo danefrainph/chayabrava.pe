@@ -51,14 +51,23 @@
 .w-work .steps { margin-bottom: clamp(50px, 6vw, 84px); }
 
 /* ---------- Paquetes (4 tarjetas) ---------- */
-.w-packs .packs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
-.w-packs .pack { border-radius: 24px; }
-.w-packs .pack__head { padding: 20px 10px 6px; }
-.w-packs .pack__name, .w-packs .pack__price { font-size: clamp(28px, 2.8vw, 39px); }
-.w-packs .pack ul { padding: 8px 12px 18px 18px; gap: 7px; font-size: 11px; }
-.w-packs .pack__foot { font-size: clamp(15px, 1.42vw, 20px); padding-block: 9px 10px; }
-.pack--premium { --pc: var(--c-purple); }
-.pack--premium .pack__name { text-transform: uppercase; }
+.w-packs .packs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.5vw, 22px); align-items: stretch; }
+.w-packs .packs__grid > li { display: flex; }
+.w-packs .pack { flex: 1; border-radius: 24px; color: var(--c-red); }
+.w-packs .pack__name { text-align: center; padding: 24px 12px 14px; font-size: clamp(28px, 2.7vw, 40px); }
+.w-packs .pack ul { flex: 1; padding: 0 16px 14px 22px; gap: 9px; font-weight: 400; font-size: clamp(12.5px, 1.05vw, 15px); line-height: 1.15; }
+.w-packs .pack__time { padding: 0 16px 10px 22px; font-family: var(--f-body); font-size: clamp(13px, 1.1vw, 15.5px); }
+.w-packs .pack__foot { display: block; font-size: clamp(20px, 1.9vw, 27px); text-transform: none; padding: 10px 8px 12px; transition: background .3s, color .3s; }
+.w-packs .pack__foot:hover { background: #000; }
+.w-packs .pack--dark { background: var(--c-red-flag); color: #fff; }
+.w-packs .pack--dark .pack__name { color: #fff; }
+.w-packs .pack--dark ul { font-weight: 700; font-size: clamp(11.5px, .95vw, 13.5px); }
+.w-packs .pack--dark .pack__time { font-weight: 700; }
+.w-packs .pack--dark .pack__foot { background: #fff; color: var(--c-red-flag); }
+.w-packs .pack--dark .pack__foot:hover { background: var(--c-yellow); color: #000; }
+
+/* Ícono de carpeta junto al título "Proyectos" */
+.projects__icon { display: inline-block; width: 1.15em; height: auto; margin-right: .5em; vertical-align: -.12em; }
 
 /* ---------- CTA turquesa ---------- */
 .w-cta { --tint: #3bd4ae; }
