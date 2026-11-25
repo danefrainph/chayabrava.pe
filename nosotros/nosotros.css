@@ -129,3 +129,14 @@
   .n-hero__glyph { position: static; width: 64px; margin: 24px 0 0 var(--gutter); }
 }
 /* === FIN REVISIÓN 1 === */
+
+/* Actualización INTERFAZ NOSOTROS: valores con íconos de línea y staff de 2 personas */
+.n-define { --tint: #ece8e1; }
+.n-value h3.t-teal { color: var(--c-mint); }
+.n-value h3.t-yellow { color: var(--c-yellow); }
+.n-value h3.t-red { color: var(--c-red); }
+.n-value__icon { height: clamp(56px, 5vw, 72px); }
+.n-staff { grid-template-columns: repeat(2, minmax(0, 306px)); }
+.staff { padding-bottom: 26px; }
+.staff__role { margin-bottom: 0; }
+@media (max-width: 960px) { .n-staff { grid-template-columns: minmax(0, 340px); } }

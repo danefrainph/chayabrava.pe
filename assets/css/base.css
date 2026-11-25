@@ -575,3 +575,10 @@ body.menu-open { overflow: hidden; }
   .project__meta { grid-template-columns: 1fr; gap: 10px; }
 }
 /* === FIN REVISIÓN 7 === */
+
+/* Enlace "Ver página web" de los proyectos */
+.project__link { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 10px 22px; border-radius: 999px; background: var(--c-red); color: #fff; font-family: var(--f-display); text-transform: uppercase; font-size: 16px; transition: background .3s, transform .3s var(--ease-out); }
+.project__link::after { content: "→"; font-family: Arial, sans-serif; }
+.project__link:hover { background: #000; transform: translateY(-2px); }
+a.project__media { display: block; }
+.project__meta { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
