@@ -74,37 +74,37 @@
 
   <main id="main">
     <!-- ================= HERO ================= -->
-    <section class="b-hero" aria-labelledby="b-title">
-      <div class="b-hero__bg" aria-hidden="true"><img src="../assets/img/fondos/machu-picchu.webp" alt="" width="1517" height="750" fetchpriority="high"></div>
-      <div class="container b-hero__inner">
-        <div class="b-hero__copy">
-          <h1 class="display b-hero__title" id="b-title"><span data-split>Branding</span><img class="b-hero__glyph" src="../assets/img/grecas/greca-cuadruple-roja.svg" alt="" width="164" height="153"></h1>
-          <p class="b-hero__text reveal" style="--d:.3s">Construimos identidades de marca poderosas que comunican y son únicas. Desde el logo hasta el manual completo.</p>
-        </div>
-        <div class="b-hero__card reveal reveal--zoom" style="--d:.2s"><img src="../assets/img/proyectos/sinchi-catalogo.webp" alt="Catálogo y brochure de Sinchi" width="569" height="759"></div>
+    <section class="br-hero" aria-labelledby="b-title">
+      <picture class="br-hero__bg" aria-hidden="true">
+        <source media="(max-width: 760px)" srcset="../assets/img/fondos/lima-costa-movil.jpg">
+        <img src="../assets/img/fondos/lima-costa.jpg" alt="" width="1700" height="1133" fetchpriority="high">
+      </picture>
+      <div class="br-canvas">
+        <h1 class="display br-hero__title" id="b-title"><span class="br-t br-hero__word" data-split>Branding</span></h1>
+        <img class="br-hero__glyph" src="../assets/img/grecas/greca-cuadruple-roja.svg" alt="" width="164" height="153">
+        <p class="br-t br-hero__text reveal" style="--d:.3s">Construimos identidades de marca<br>poderosas que comunican y son únicas.<br>Desde el logo hasta el manual completo</p>
+        <div class="br-hero__card reveal reveal--zoom" style="--d:.2s"><img src="../assets/img/proyectos/sinchi-catalogo.webp" alt="Catálogo y brochure de Sinchi" width="569" height="759"></div>
+        <a class="br-btn br-hero__cta" href="../contacto/index.html?servicio=branding">Cotizar ahora</a>
       </div>
-      <div class="b-hero__greca" aria-hidden="true"></div>
-      <div class="b-hero__cta"><a class="btn btn--flag btn--xl" href="../contacto/index.html?servicio=branding">Cotizar ahora</a></div>
+      <div class="br-greca br-greca--crema" aria-hidden="true"></div>
     </section>
 
     <!-- ================= MÁS QUE UN LOGO ================= -->
-    <section class="b-intro bg-brick" aria-labelledby="intro-title">
-      <div class="container b-intro__grid">
-        <div class="b-intro__head reveal">
-          <svg class="b-intro__icon" viewBox="0 0 122 122" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h122v122H0zM18 18v86h86V18zM31 31h60v60H31zM45 45v32h32V45z"/></svg>
-          <h2 class="display" id="intro-title">Más que un logo,<br>una marca</h2>
-        </div>
-        <p class="reveal" style="--d:.15s">Tu marca es lo que la gente siente cuando escucha tu nombre. Diseñamos sistemas visuales coherentes que transmiten confianza y te hacen fácil de recordar.</p>
+    <section class="br-intro br-brick" aria-labelledby="intro-title">
+      <div class="br-canvas">
+        <img class="br-intro__icon" src="../assets/img/iconos/greca-cuadrada.svg" alt="" width="110" height="110">
+        <h2 class="display br-intro__title" id="intro-title"><span class="br-t br-intro__l1" data-split>Más que un logo,</span> <em class="br-t br-intro__l2" data-split>una marca</em></h2>
+        <p class="br-t br-intro__text reveal" style="--d:.15s">Tu marca es lo que la gente siente<br> cuando escucha tu nombre. Diseñamos<br> sistemas visuales coherentes que<br> transmiten confianza y te hacen fácil de<br> recordar.</p>
       </div>
     </section>
 
     <!-- ================= SERVICIO DE BRANDING ================= -->
-    <section class="dark-band b-services" aria-labelledby="b-services-title">
-      <div class="dark-band__bg" aria-hidden="true"><img src="../assets/img/fondos/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
-      <div class="container container--wide">
-        <h2 class="display dark-band__title" id="b-services-title" data-split>Servicio de <span class="t-flag">branding</span></h2>
-        <p class="dark-band__text reveal">Elige un servicio puntual o el paquete completo. Armamos el alcance según lo que tu marca necesita hoy.</p>
-        <ul class="services-list reveal" style="--d:.15s">
+    <section class="br-serv" aria-labelledby="b-services-title">
+      <div class="br-canvas">
+        <div class="br-serv__bg" aria-hidden="true"><img src="../assets/img/fondos/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
+        <h2 class="display br-t br-serv__title" id="b-services-title" data-split>Servicio de <span class="br-red">branding</span></h2>
+        <p class="br-t br-serv__text reveal">Elige un servicio puntual o el paquete completo. Armamos<br> el alcance según lo que tu marca necesita hoy.</p>
+        <ul class="br-services display reveal" style="--d:.15s">
           <li>Logo y variantes</li>
           <li>Merchandising</li>
           <li>Papelería corporativa</li>
@@ -114,137 +114,120 @@
         </ul>
       </div>
     </section>
-    <div class="b-ribbon" aria-hidden="true"><div class="b-ribbon__track"><span>Logo y variantes</span><span>Merchandising</span><span>Papelería corporativa</span><span>Flyers digitales</span><span>Manual de marca</span><span>Estrategia de marca</span><span>Logo y variantes</span><span>Merchandising</span><span>Papelería corporativa</span><span>Flyers digitales</span><span>Manual de marca</span><span>Estrategia de marca</span></div></div>
 
     <!-- ================= CÓMO LO HACEMOS + PROYECTOS ================= -->
-    <section class="b-work bg-brick" aria-labelledby="how-title">
-      <div class="container">
-        <h2 class="display b-how__title" id="how-title" data-split><span class="t-yellow">Cómo lo</span><br><span class="t-red">hacemos</span></h2>
-        <ol class="steps">
-          <li class="reveal" style="--d:0.0s"><span class="steps__num">01</span><h3>Diagnóstico</h3><p>Entrevista, análisis de tu competencia y de tu público.</p></li>
-          <li class="reveal" style="--d:0.1s"><span class="steps__num">02</span><h3>Definir</h3><p>Concepto, personalidad y dirección creativa de la marca.</p></li>
-          <li class="reveal" style="--d:0.2s"><span class="steps__num">03</span><h3>Diseñar</h3><p>Logotipo, sistema visual y aplicaciones principales.</p></li>
-          <li class="reveal" style="--d:0.3s"><span class="steps__num">04</span><h3>Entrega</h3><p>Manual de marca y archivos listos para usar en todo.</p></li>
-        </ol>
+    <section class="br-work br-brick" aria-labelledby="how-title">
+      <div class="br-canvas">
+        <div class="br-how">
+          <h2 class="display br-how__title" id="how-title"><span class="br-t br-how__l1" data-split>Cómo lo</span> <em class="br-t br-how__l2" data-split>hacemos</em></h2>
+          <ol class="br-steps">
+            <li class="reveal" style="--d:0s"><span class="br-steps__num display">01</span><h3 class="display">Diagnóstico</h3><p>Entrevista, análisis de<br> tu competencia y de tu<br> público.</p></li>
+            <li class="reveal" style="--d:.1s"><span class="br-steps__num display">02</span><h3 class="display">Definir</h3><p>Concepto, personalidad<br> y dirección creativa de<br> la marca.</p></li>
+            <li class="reveal" style="--d:.2s"><span class="br-steps__num display">03</span><h3 class="display">Diseñar</h3><p>Logotipo, sistema<br> visual y aplicaciones<br> principales.</p></li>
+            <li class="reveal" style="--d:.3s"><span class="br-steps__num display">04</span><h3 class="display">Entrega</h3><p>Manual de marca y<br> archivos listos para<br> usar en todo.</p></li>
+          </ol>
+        </div>
 
-        <h2 class="display projects__title" id="proyectos" data-split>Proyectos</h2>
-        <div class="projects" id="casos">
-          <article class="project">
-            <div class="project__media reveal reveal--left"><img src="../assets/img/proyectos/sinchi-papeleria.webp" alt="Catálogo, brochure, tarjetas y carpetas de Sinchi" width="1100" height="733" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Sinchi</h3>
-              <p class="project__desc">Una empresa técnica que necesitaba verse tan sólida como su trabajo. Desarrollamos un sistema visual en amarillo y azul profundo, aplicado a catálogo general, brochure, tarjetas, carpetas y merchandising.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Construcción e ingeniería</dd></div>
-                <div><dt>Entregables</dt><dd>Catálogo, brochure, papelería</dd></div>
-              </dl>
-            </div>
+        <div class="br-projects__head">
+          <img src="../assets/img/iconos/proyectos.svg" alt="" width="85" height="85">
+          <h2 class="display" id="proyectos" data-split>Proyectos</h2>
+        </div>
+        <div class="br-projects">
+          <article class="br-project reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/sinchi-papeleria.webp" alt="Catálogo, brochure, tarjetas y carpetas de Sinchi" width="1100" height="733"></div>
+            <h3 class="display">Sinchi</h3>
+            <p class="br-project__desc">Una empresa técnica que necesitaba verse tan sólida como su trabajo. Desarrollamos un sistema visual en amarillo y azul profundo, aplicado a catálogo general, brochure, tarjetas, carpetas y merchandising.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Construcción e ingeniería</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Catálogo, brochure, papelería</dd></div>
+            </dl>
           </article>
-          <article class="project project--rev">
-            <div class="project__media reveal reveal--right"><img src="../assets/img/proyectos/el-taita.webp" alt="Empaques, bolsa y mandil con la marca El Taita" width="1100" height="825" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">El Taita</h3>
-              <p class="project__desc">Una marca que se dedica a la preparación de shawarmas, tacos y comida rápida, mezclando la comida peruana con la oriental.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Gastronomía</dd></div>
-                <div><dt>Entregables</dt><dd>Logo y merchandising</dd></div>
-              </dl>
-            </div>
+          <article class="br-project br-project--der reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/el-taita.webp" alt="Empaques, bolsa y mandil con la marca El Taita" width="1100" height="825" loading="lazy"></div>
+            <h3 class="display">El Taita</h3>
+            <p class="br-project__desc">Una marca que se dedica a la preparación de shawarmas, tacos y comida rápida, mezclando la comida peruana con la oriental.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Gastronomía</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Logo y merchandising</dd></div>
+            </dl>
           </article>
-          <article class="project">
-            <div class="project__media reveal reveal--left"><img src="../assets/img/proyectos/tiendas-chan.webp" alt="Tomatodo, gorra, bolsa y papelería de Tiendas Chan" width="1100" height="619" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Tiendas Chan</h3>
-              <p class="project__desc">Una tienda expansiva de máquinas expendedoras automáticas. Esta marca, originada en Sullana, Piura, busca ser la pionera en el rubro y llegar a un público juvenil.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Tienda automática</dd></div>
-                <div><dt>Entregables</dt><dd>Manual de marca, señalética, merchandising</dd></div>
-              </dl>
-            </div>
+          <article class="br-project reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/tiendas-chan.webp" alt="Tomatodo, gorra, bolsa y papelería de Tiendas Chan" width="1100" height="619" loading="lazy"></div>
+            <h3 class="display">Tiendas Chan</h3>
+            <p class="br-project__desc">Una tienda expansiva de máquinas expendedoras automáticas. Esta marca, originada en Sullana, Piura, busca ser la pionera en el rubro y llegar a un público juvenil.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Tienda automática</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Manual de marca, señalética, merchandising</dd></div>
+            </dl>
           </article>
-          <article class="project project--rev">
-            <div class="project__media reveal reveal--right"><img src="../assets/img/proyectos/selecto-contadores.webp" alt="Manual de marca y papelería de Selecto Contadores" width="1100" height="825" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Selecto Contadores</h3>
-              <p class="project__desc">Un estudio de asesores contables y jurídicos que necesitaba transmitir orden y confianza. Creamos una identidad en verde y azul, aplicada a su manual de marca y papelería.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Contabilidad jurídica</dd></div>
-                <div><dt>Entregables</dt><dd>Manual de marca, papelería</dd></div>
-              </dl>
-            </div>
+          <article class="br-project br-project--der reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/selecto-contadores.webp" alt="Manual de marca y papelería de Selecto Contadores" width="1100" height="825" loading="lazy"></div>
+            <h3 class="display">Selecto Contadores</h3>
+            <p class="br-project__desc">Un estudio de asesores contables y jurídicos que necesitaba transmitir orden y confianza. Creamos una identidad en verde y azul, aplicada a su manual de marca y papelería.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Contabilidad jurídica</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Manual de marca, papelería</dd></div>
+            </dl>
           </article>
-          <article class="project">
-            <div class="project__media reveal reveal--left"><img src="../assets/img/proyectos/parque-huascar.webp" alt="Papelería, empaques y señalética del Parque Huáscar" width="1100" height="825" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Parque Huáscar</h3>
-              <p class="project__desc">Esta marca buscaba llegar a un público familiar y juvenil: al ser un parque familiar municipal, buscaban transmitir alegría y diversión sin perder la esencia de vida ambiental.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Parque municipal</dd></div>
-                <div><dt>Entregables</dt><dd>Manual de marca, señalética, papelería, packaging</dd></div>
-              </dl>
-            </div>
+          <article class="br-project reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/parque-huascar.webp" alt="Papelería, empaques y señalética del Parque Huáscar" width="1100" height="825" loading="lazy"></div>
+            <h3 class="display">Parque Huáscar</h3>
+            <p class="br-project__desc">Esta marca buscaba llegar a un público familiar y juvenil: al ser un parque familiar municipal, buscaban transmitir alegría y diversión sin perder la esencia de vida ambiental.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Parque municipal</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Manual de marca, señalética, papelería, packaging</dd></div>
+            </dl>
           </article>
-          <article class="project project--rev">
-            <div class="project__media reveal reveal--right"><img src="../assets/img/proyectos/doctor-labs.webp" alt="Papelería, banner y merchandising de Doctor Labs" width="1100" height="733" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Doctor Labs</h3>
-              <p class="project__desc">Una empresa dedicada a consultas y operaciones cardiológicas, que tiene como finalidad brindar una asesoría y experiencia de alta calidad.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Cardiología</dd></div>
-                <div><dt>Entregables</dt><dd>Logo, merchandising y banner</dd></div>
-              </dl>
-            </div>
+          <article class="br-project br-project--der reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/doctor-labs.webp" alt="Papelería, banner y merchandising de Doctor Labs" width="1100" height="733" loading="lazy"></div>
+            <h3 class="display">Doctor Labs</h3>
+            <p class="br-project__desc">Una empresa dedicada a consultas y operaciones cardiológicas, que tiene como finalidad brindar una asesoría y experiencia de alta calidad.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Cardiología</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Logo, merchandising y banner</dd></div>
+            </dl>
           </article>
-          <article class="project">
-            <div class="project__media reveal reveal--left"><img src="../assets/img/proyectos/gbs-soluciones.webp" alt="Papelería, fotocheck y merchandising de GBS Soluciones" width="1100" height="825" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">GBS Soluciones</h3>
-              <p class="project__desc">Una empresa de soluciones tecnológicas integrales que necesitaba una imagen moderna y confiable. Desarrollamos un sistema visual en azul, aplicado a papelería, fotochecks y merchandising.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Técnico tecnológico</dd></div>
-                <div><dt>Entregables</dt><dd>Logo, merchandising, papelería</dd></div>
-              </dl>
-            </div>
+          <article class="br-project reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/gbs-soluciones.webp" alt="Papelería, fotocheck y merchandising de GBS Soluciones" width="1100" height="825" loading="lazy"></div>
+            <h3 class="display">GBS Soluciones</h3>
+            <p class="br-project__desc">Una empresa de soluciones tecnológicas integrales que necesitaba una imagen moderna y confiable. Desarrollamos un sistema visual en azul, aplicado a papelería, fotochecks y merchandising.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Técnico tecnológico</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Logo, merchandising, papelería</dd></div>
+            </dl>
           </article>
-          <article class="project project--rev">
-            <div class="project__media reveal reveal--right"><img src="../assets/img/proyectos/beauty-studio.webp" alt="Empaques, bolsas y papelería de Beauty Studio" width="1100" height="733" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Beauty Studio</h3>
-              <p class="project__desc">Esta marca se dedica al rubro de belleza y cuidado de la piel, por eso trabajamos bajo el concepto de estética facial y belleza.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Belleza y cosmética</dd></div>
-                <div><dt>Entregables</dt><dd>Logo, merchandising y papelería</dd></div>
-              </dl>
-            </div>
+          <article class="br-project br-project--der reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/beauty-studio.webp" alt="Empaques, bolsas y papelería de Beauty Studio" width="1100" height="733" loading="lazy"></div>
+            <h3 class="display">Beauty Studio</h3>
+            <p class="br-project__desc">Esta marca se dedica al rubro de belleza y cuidado de la piel, por eso trabajamos bajo el concepto de estética facial y belleza.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Belleza y cosmética</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Logo, merchandising y papelería</dd></div>
+            </dl>
           </article>
-          <article class="project">
-            <div class="project__media reveal reveal--left"><img src="../assets/img/proyectos/aventura.webp" alt="Catálogo, gorra, bolsa y papelería de Aventura" width="1100" height="825" loading="lazy"></div>
-            <div class="project__body reveal">
-              <h3 class="display">Aventura</h3>
-              <p class="project__desc">Esta marca brinda el servicio de guía y trekking. Su objetivo es ofrecer a las personas una experiencia de aventura a través del trekking y otras actividades al aire libre.</p>
-              <dl class="project__meta">
-                <div><dt>Rubro</dt><dd>Equipo de trekking y aventura</dd></div>
-                <div><dt>Entregables</dt><dd>Catálogo, brochure, papelería</dd></div>
-              </dl>
-            </div>
+          <article class="br-project reveal">
+            <div class="br-project__media"><img src="../assets/img/proyectos/aventura.webp" alt="Catálogo, gorra, bolsa y papelería de Aventura" width="1100" height="825" loading="lazy"></div>
+            <h3 class="display">Aventura</h3>
+            <p class="br-project__desc">Esta marca brinda el servicio de guía y trekking. Su objetivo es ofrecer a las personas una experiencia de aventura a través del trekking y otras actividades al aire libre.</p>
+            <dl class="br-project__meta">
+              <div><dt class="display">Rubro</dt><dd class="display">Equipo de trekking y aventura</dd></div>
+              <div><dt class="display">Entregables</dt><dd class="display">Catálogo, brochure, papelería</dd></div>
+            </dl>
           </article>
         </div>
-        <a class="down-arrow" href="#paquetes" aria-label="Ver paquetes de branding"><svg viewBox="0 0 40 40" aria-hidden="true"><path fill="currentColor" d="M14.5 3h11v18h9.5L20 38 5 21h9.5z"/></svg></a>
       </div>
     </section>
 
     <!-- ================= PAQUETES ================= -->
-    <section class="packs b-packs" id="paquetes" aria-labelledby="packs-title">
-      <div class="packs__bg" aria-hidden="true"><img src="../assets/img/servicios/boceto-andino.webp" alt="" width="1548" height="1016" loading="lazy"></div>
-      <div class="container container--wide packs__inner">
-        <div class="b-packs__head">
-          <h2 class="display packs__title" id="packs-title" data-split>Paquetes de<br><span class="t-flag">branding</span></h2>
-          <a class="btn-skew b-packs__custom" href="../contacto/index.html?servicio=branding&amp;plan=personalizado">Servicio personalizado</a>
-        </div>
-        <ul class="packs__grid">
+    <section class="br-packs" id="paquetes" aria-labelledby="packs-title">
+      <div class="br-packs__bg" aria-hidden="true"><img src="../assets/img/servicios/boceto-andino.webp" alt="" width="1548" height="1016" loading="lazy"></div>
+      <div class="br-canvas">
+        <h2 class="display br-packs__title" id="packs-title"><span class="br-t br-packs__t1" data-split>Paquetes de</span> <span class="br-t br-packs__t2" data-split>branding</span></h2>
+        <ul class="br-packs__list">
             <li>
-              <article class="pack" style="--pc:var(--c-mint)">
-                <h3 class="pack__name">Básico</h3>
+              <article class="br-pack br-pack--basico">
+                <div class="br-pack__body">
+                <h3 class="br-pack__name display">Básico</h3>
                 <ul>
                   <li>Presentación brief</li>
                   <li>Concepto creativo</li>
@@ -254,13 +237,15 @@
                   <li>2 piezas digitales</li>
                   <li>Archivos digitales (PDF, PNG)</li>
                 </ul>
-                <p class="pack__time">Entrega 7 a 10 días</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=branding&amp;plan=basico">Cotizar aquí<span class="sr-only"> el paquete Básico</span></a>
+                <p class="br-pack__time">ENTREGA 7 a 10 días</p>
+                </div>
+                <a class="br-pack__foot display" href="../contacto/index.html?servicio=branding&amp;plan=basico">Cotizar aquí<span class="sr-only"> el paquete Básico</span></a>
               </article>
             </li>
             <li>
-              <article class="pack" style="--pc:var(--c-yellow)">
-                <h3 class="pack__name">Intermedio</h3>
+              <article class="br-pack br-pack--intermedio">
+                <div class="br-pack__body">
+                <h3 class="br-pack__name display">Intermedio</h3>
                 <ul>
                   <li>Presentación brief</li>
                   <li>Concepto creativo</li>
@@ -270,13 +255,15 @@
                   <li>Papelería básica, 3 piezas</li>
                   <li>3 plantillas para redes sociales</li>
                 </ul>
-                <p class="pack__time">Entrega 14 días</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=branding&amp;plan=intermedio">Cotizar aquí<span class="sr-only"> el paquete Intermedio</span></a>
+                <p class="br-pack__time">ENTREGA 14 días</p>
+                </div>
+                <a class="br-pack__foot display" href="../contacto/index.html?servicio=branding&amp;plan=intermedio">Cotizar aquí<span class="sr-only"> el paquete Intermedio</span></a>
               </article>
             </li>
             <li>
-              <article class="pack" style="--pc:var(--c-red-band)">
-                <h3 class="pack__name">Avanzado</h3>
+              <article class="br-pack br-pack--avanzado">
+                <div class="br-pack__body">
+                <h3 class="br-pack__name display">Avanzado</h3>
                 <ul>
                   <li>Presentación brief</li>
                   <li>Logo + 5 variantes</li>
@@ -287,13 +274,15 @@
                   <li>4 piezas de merchandising</li>
                   <li>5 plantillas para redes sociales</li>
                 </ul>
-                <p class="pack__time">Entrega 2 meses</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=branding&amp;plan=avanzado">Cotizar aquí<span class="sr-only"> el paquete Avanzado</span></a>
+                <p class="br-pack__time">ENTREGA 2 meses</p>
+                </div>
+                <a class="br-pack__foot display" href="../contacto/index.html?servicio=branding&amp;plan=avanzado">Cotizar aquí<span class="sr-only"> el paquete Avanzado</span></a>
               </article>
             </li>
             <li>
-              <article class="pack pack--dark" style="--pc:#fff">
-                <h3 class="pack__name">Premium</h3>
+              <article class="br-pack br-pack--premium">
+                <div class="br-pack__body">
+                <h3 class="br-pack__name display">Premium</h3>
                 <ul>
                   <li>Presentación brief</li>
                   <li>Investigación (análisis amplio y posicionamiento)</li>
@@ -305,58 +294,58 @@
                   <li>3 aplicaciones de packaging o uniformes</li>
                   <li>8 plantillas para redes sociales</li>
                 </ul>
-                <p class="pack__time">Entrega 3 meses</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=branding&amp;plan=premium">Cotizar aquí<span class="sr-only"> el paquete Premium</span></a>
+                <p class="br-pack__time">ENTREGA 3 meses</p>
+                </div>
+                <a class="br-pack__foot display" href="../contacto/index.html?servicio=branding&amp;plan=premium">Cotizar aquí<span class="sr-only"> el paquete Premium</span></a>
               </article>
             </li>
         </ul>
+        <a class="br-packs__custom display" href="../contacto/index.html?servicio=branding&amp;plan=personalizado">Servicio personalizado</a>
       </div>
     </section>
-    <div class="greca-band" aria-hidden="true"></div>
 
     <!-- ================= CTA ================= -->
-    <section class="cta-final b-cta bg-brick" aria-labelledby="cta-title">
-      <div class="container cta-final__inner">
-        <img class="cta-final__glyph" src="../assets/img/grecas/llave-arriba.svg" alt="" width="41" height="76">
-        <h2 class="display cta-final__title" id="cta-title"><span class="t-yellow">Hagamos tu marca</span><span class="t-red">realidad</span></h2>
-        <a class="btn btn--white btn--lg reveal" href="../contacto/index.html?servicio=branding" data-magnetic>Cotizar ahora</a>
-        <img class="cta-final__glyph" src="../assets/img/grecas/llave-abajo.svg" alt="" width="42" height="75">
+    <section class="br-cta br-brick" aria-labelledby="cta-title">
+      <div class="br-greca br-greca--roja" aria-hidden="true"></div>
+      <div class="br-canvas">
+        <img class="br-cta__glyph br-cta__glyph--top" src="../assets/img/grecas/llave-arriba.svg" alt="" width="41" height="76">
+        <h2 class="display br-cta__title" id="cta-title"><span class="br-t br-cta__t1">Hagamos tu marca</span> <span class="br-t br-cta__t2">realidad</span></h2>
+        <a class="br-btn br-cta__btn" href="../contacto/index.html?servicio=branding" data-magnetic>Cotizar ahora</a>
+        <img class="br-cta__glyph br-cta__glyph--bottom" src="../assets/img/grecas/llave-abajo.svg" alt="" width="42" height="75">
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <img src="../assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="126" height="72" loading="lazy">
-        <p>Agencia de Marketing digital con alma peruana. Transformamos marcas en referentes visuales y digitales con creatividad y pasión.</p>
+        <img class="footer__logo" src="../assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="173" height="99" loading="lazy">
+        <p>Agencia de Marketing digital con<br>alma peruana. Transformamos<br>marcas en referentes visuales y<br>digitales con creatividad<br>y pasión.</p>
         <ul class="social" aria-label="Redes sociales"><li><a href="https://www.facebook.com/chayabrava" target="_blank" rel="noopener" aria-label="Facebook de Chaya Brava"><img src="../assets/img/redes/facebook.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.instagram.com/chayabrava" target="_blank" rel="noopener" aria-label="Instagram de Chaya Brava"><img src="../assets/img/redes/instagram.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.youtube.com/@chayabrava" target="_blank" rel="noopener" aria-label="YouTube de Chaya Brava"><img src="../assets/img/redes/youtube.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.tiktok.com/@chayabrava" target="_blank" rel="noopener" aria-label="TikTok de Chaya Brava"><img src="../assets/img/redes/tiktok.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.linkedin.com/company/chayabrava" target="_blank" rel="noopener" aria-label="LinkedIn de Chaya Brava"><img src="../assets/img/redes/linkedin.svg" alt="" width="51" height="52"></a></li></ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:165px">Servicios</h2>
+      <div class="footer__col footer__col--serv">
+        <h2 class="footer__title">Servicios</h2>
         <ul class="footer__links">
-          <li><a href="../branding/index.html">Branding y Identidad</a></li>
-          <li><a href="../audiovisual/index.html#produccion">Social Media</a></li>
-          <li><a href="../audiovisual/index.html#galeria">Fotografía</a></li>
+          <li><a href="../branding/index.html">Branding</a></li>
+          <li><a href="../audiovisual/index.html">Fotografía y Audiovisual</a></li>
           <li><a href="../paginas-web/index.html">Páginas Web</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:103px">Empresa</h2>
+      <div class="footer__col footer__col--emp">
+        <h2 class="footer__title">Empresa</h2>
         <ul class="footer__links">
           <li><a href="../nosotros/index.html">Nosotros</a></li>
-          <li><a href="../index.html#proyectos">Clientes</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
           <li><a href="../contacto/index.html">Contactos</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:205px">Contáctanos</h2>
+      <div class="footer__col footer__col--cont">
+        <h2 class="footer__title">Contáctanos</h2>
         <dl class="footer__contact">
           <dt>Teléfonos</dt>
           <dd><a href="tel:+51987270466">987 270 466</a></dd>
           <dt>Email</dt>
-          <dd><a href="mailto:chayabrava@gmail.com">chayabrava@gmail.com</a></dd>
+          <dd><a href="mailto:chayabrava@gmail.com">chayabrava<span class="footer__at">@</span>gmail.com</a></dd>
         </dl>
       </div>
     </div>

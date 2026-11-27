@@ -74,46 +74,50 @@
 
   <main id="main">
     <!-- ================= HERO ================= -->
-    <section class="a-hero" aria-labelledby="a-title">
-      <picture class="a-hero__bg" aria-hidden="true">
+    <section class="av-hero" aria-labelledby="a-title">
+      <picture class="av-hero__bg" aria-hidden="true">
         <source media="(max-width: 760px)" srcset="../assets/img/fondos/vinicunca-movil.webp">
         <img src="../assets/img/fondos/vinicunca.webp" alt="" width="1920" height="1280" fetchpriority="high">
       </picture>
-      <div class="container a-hero__inner">
-        <div class="a-hero__copy">
-          <p class="display a-hero__ghost a-hero__ghost--top" aria-hidden="true">Audiovisual</p>
-          <h1 class="display a-hero__title" id="a-title" data-split>Audiovisual</h1>
-          <p class="display a-hero__ghost a-hero__ghost--bottom" aria-hidden="true">Audiovisual</p>
-          <p class="a-hero__text reveal" style="--d:.3s">Historias que conectan: video, fotografía y contenido para redes que inspiran, emocionan y posicionan tu marca.</p>
-        </div>
-        <div class="a-hero__visual reveal reveal--zoom" style="--d:.2s"><img src="../assets/img/personajes/camara-andina.webp" alt="" width="921" height="1228"></div>
+      <div class="av-canvas">
+        <h1 class="display av-hero__title" id="a-title">
+          <span class="av-t av-hero__t1" data-split>Audiovisual</span>
+          <span class="av-t av-hero__t2" data-split>y fotografía</span>
+        </h1>
+        <p class="av-t av-hero__text reveal" style="--d:.3s">Historias que conectan<br>video, fotografía y contenido para<br>redes que inspiran, emocionan y<br>posicionan tu marca.</p>
+        <div class="av-hero__camera reveal reveal--zoom" style="--d:.2s"><img src="../assets/img/personajes/camara-andina.webp" alt="" width="921" height="1228"></div>
+        <a class="av-btn av-hero__cta" href="../contacto/index.html?servicio=audiovisual">Cotizar ahora</a>
       </div>
-      <div class="a-hero__cta"><a class="btn btn--yellow btn--lg" href="../contacto/index.html?servicio=audiovisual">Cotizar ahora</a></div>
-      <div class="a-hero__greca" aria-hidden="true"></div>
+      <div class="av-greca av-greca--oscura" aria-hidden="true"></div>
     </section>
 
     <!-- ================= LUZ, CÁMARA Y ESTRATEGIA ================= -->
-    <section class="a-intro" aria-labelledby="luz-title">
-      <div class="container a-intro__grid">
-        <h2 class="display a-intro__title reveal" id="luz-title"><span>Luz, cámara</span><span>y <em class="a-intro__mark">estrategia</em></span></h2>
-        <div class="a-intro__copy reveal" style="--d:.15s">
-          <p>Cada pieza nace de un objetivo: dar a conocer, generar confianza o vender. Planificamos, grabamos y editamos con la misma obsesión por el detalle con la que diseñamos marcas.</p>
-          <ul class="a-badges">
-            <li><strong>4K</strong><span>Grabación y entrega</span></li>
-            <li><strong>9:16</strong><span>Formatos para redes</span></li>
-            <li><strong>360°</strong><span>Idea, rodaje y edición</span></li>
+    <section class="av-intro av-brick" aria-labelledby="luz-title">
+      <div class="av-canvas">
+        <h2 class="display av-intro__title reveal" id="luz-title">
+          <span class="av-t av-intro__l1">Luz, cámara</span>
+          <span class="av-t av-intro__y">y</span>
+          <span class="av-intro__mark" aria-hidden="true"></span>
+          <em class="av-t av-intro__est">estrategia</em>
+        </h2>
+        <div class="av-intro__copy reveal" style="--d:.15s">
+          <p class="av-t av-intro__text"><span>Cada pieza nace de un objetivo: dar a</span> <span>conocer, generar confianza o vender.</span> <span class="is-just">Planificamos, grabamos y editamos</span> <span class="is-just">con la misma obsesión por el detalle</span> <span>con la que diseñamos marcas.</span></p>
+          <ul class="av-badges">
+            <li><strong class="display">4K</strong><span>Grabación<br>y entrega</span></li>
+            <li><strong class="display">9:16</strong><span>Formatos<br>para redes</span></li>
+            <li><strong class="display">360°</strong><span>Idea, rodaje<br>y edición</span></li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- ================= PRODUCCIÓN AUDIOVISUAL ================= -->
-    <section class="dark-band a-services" id="produccion" aria-labelledby="a-services-title">
-      <div class="dark-band__bg" aria-hidden="true"><img src="../assets/img/fondos/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
-      <div class="container container--wide">
-        <h2 class="display dark-band__title" id="a-services-title" data-split>Producción <span class="t-yellow">audiovisual</span></h2>
-        <p class="dark-band__text reveal">Desde una sesión de fotos hasta una campaña completa. Nos encargamos de todo el proceso.</p>
-        <ul class="services-list reveal" style="--d:.15s">
+    <section class="av-prod" id="produccion" aria-labelledby="a-services-title">
+      <div class="av-canvas">
+        <div class="av-prod__bg" aria-hidden="true"><img src="../assets/img/fondos/muro-inca.webp" alt="" width="1672" height="941" loading="lazy"></div>
+        <h2 class="display av-t av-prod__title" id="a-services-title" data-split>Producción <span class="t-yellow">audiovisual</span></h2>
+        <p class="av-t av-prod__text reveal">Desde una sesión de fotos hasta una campaña completa.<br>Nos encargamos de todo el proceso.</p>
+        <ul class="av-services display reveal" style="--d:.15s">
           <li>Fotografía<br>de producto</li>
           <li>Fotografía<br>inmobiliaria</li>
           <li>Videos<br>publicitarios</li>
@@ -125,38 +129,15 @@
     </section>
 
     <!-- ================= GALERÍA ================= -->
-    <section class="a-gallery" id="galeria" aria-labelledby="gal-title">
-      <div class="container">
-        <h2 class="display a-gallery__title" id="gal-title" data-split>Galería de trabajos</h2>
-        <ul class="gallery">
+    <section class="av-gal av-brick" id="galeria" aria-labelledby="gal-title">
+      <div class="av-canvas">
+        <img class="av-gal__icon" src="../assets/img/iconos/video.svg" alt="" width="112" height="83">
+        <h2 class="display av-t av-gal__title" id="gal-title" data-split>Galería de trabajos</h2>
+        <ul class="av-grid">
           <li class="reveal" style="--d:0.00s">
             <button class="g-item__btn" type="button" data-full="../assets/img/servicios/produccion-video.webp" data-title="Producción en estudio" data-sub="Video corporativo" aria-haspopup="dialog">
               <img src="../assets/img/servicios/produccion-video.webp" alt="Rodaje de video corporativo en estudio" width="848" height="477" loading="lazy">
               <span class="g-item__info"><strong>Producción en estudio</strong><span>Video corporativo</span></span>
-            </button>
-          </li>
-          <li class="reveal" style="--d:0.08s">
-            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/revista-estreno.webp" data-title="Estreno al aire libre" data-sub="Campaña audiovisual" aria-haspopup="dialog">
-              <img src="../assets/img/proyectos/revista-estreno.webp" alt="Revista con la campaña Estreno al aire libre" width="978" height="691" loading="lazy">
-              <span class="g-item__info"><strong>Estreno al aire libre</strong><span>Campaña audiovisual</span></span>
-            </button>
-          </li>
-          <li class="reveal" style="--d:0.16s">
-            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/el-taita.webp" data-title="El Taita" data-sub="Fotografía de producto" aria-haspopup="dialog">
-              <img src="../assets/img/proyectos/el-taita.webp" alt="Fotografía de producto para El Taita" width="1100" height="825" loading="lazy">
-              <span class="g-item__info"><strong>El Taita</strong><span>Fotografía de producto</span></span>
-            </button>
-          </li>
-          <li class="reveal" style="--d:0.24s">
-            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/sinchi-catalogo.webp" data-title="Sinchi" data-sub="Fotografía de producto" aria-haspopup="dialog">
-              <img src="../assets/img/proyectos/sinchi-catalogo.webp" alt="Catálogo de Sinchi fotografiado en estudio" width="569" height="759" loading="lazy">
-              <span class="g-item__info"><strong>Sinchi</strong><span>Fotografía de producto</span></span>
-            </button>
-          </li>
-          <li class="reveal" style="--d:0.00s">
-            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/tiendas-chan.webp" data-title="Tiendas Chan" data-sub="Fotografía de producto" aria-haspopup="dialog">
-              <img src="../assets/img/proyectos/tiendas-chan.webp" alt="Merchandising de Tiendas Chan" width="1100" height="619" loading="lazy">
-              <span class="g-item__info"><strong>Tiendas Chan</strong><span>Fotografía de producto</span></span>
             </button>
           </li>
           <li class="reveal" style="--d:0.08s">
@@ -166,9 +147,9 @@
             </button>
           </li>
           <li class="reveal" style="--d:0.16s">
-            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/sinchi-papeleria.webp" data-title="Sinchi" data-sub="Fotografía corporativa" aria-haspopup="dialog">
-              <img src="../assets/img/proyectos/sinchi-papeleria.webp" alt="Papelería corporativa de Sinchi" width="1100" height="733" loading="lazy">
-              <span class="g-item__info"><strong>Sinchi</strong><span>Fotografía corporativa</span></span>
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/revista-estreno.webp" data-title="Estreno al aire libre" data-sub="Campaña audiovisual" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/revista-estreno.webp" alt="Revista con la campaña Estreno al aire libre" width="978" height="691" loading="lazy">
+              <span class="g-item__info"><strong>Estreno al aire libre</strong><span>Campaña audiovisual</span></span>
             </button>
           </li>
           <li class="reveal" style="--d:0.24s">
@@ -177,35 +158,85 @@
               <span class="g-item__info"><strong>Iconografía andina</strong><span>Fotografía de proceso</span></span>
             </button>
           </li>
+          <li class="reveal" style="--d:0.00s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/el-taita.webp" data-title="El Taita" data-sub="Fotografía de producto" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/el-taita.webp" alt="Fotografía de producto para El Taita" width="1100" height="825" loading="lazy">
+              <span class="g-item__info"><strong>El Taita</strong><span>Fotografía de producto</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.08s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/tiendas-chan.webp" data-title="Tiendas Chan" data-sub="Fotografía de producto" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/tiendas-chan.webp" alt="Merchandising de Tiendas Chan" width="1100" height="619" loading="lazy">
+              <span class="g-item__info"><strong>Tiendas Chan</strong><span>Fotografía de producto</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.16s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/sinchi-papeleria.webp" data-title="Sinchi" data-sub="Fotografía corporativa" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/sinchi-papeleria.webp" alt="Papelería corporativa de Sinchi" width="1100" height="733" loading="lazy">
+              <span class="g-item__info"><strong>Sinchi</strong><span>Fotografía corporativa</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.24s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/sinchi-catalogo.webp" data-title="Sinchi" data-sub="Fotografía de producto" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/sinchi-catalogo.webp" alt="Catálogo de Sinchi fotografiado en estudio" width="569" height="759" loading="lazy">
+              <span class="g-item__info"><strong>Sinchi</strong><span>Fotografía de producto</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.00s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/beauty-studio.webp" data-title="Beauty Studio" data-sub="Línea de productos" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/beauty-studio.webp" alt="Productos y papelería de Beauty Studio" width="1100" height="733" loading="lazy">
+              <span class="g-item__info"><strong>Beauty Studio</strong><span>Línea de productos</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.08s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/aventura.webp" data-title="Aventura" data-sub="Papelería y merchandising" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/aventura.webp" alt="Papelería y merchandising de Aventura" width="1100" height="825" loading="lazy">
+              <span class="g-item__info"><strong>Aventura</strong><span>Papelería y merchandising</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.16s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/parque-huascar.webp" data-title="Parque Zonal Huáscar" data-sub="Papelería de marca" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/parque-huascar.webp" alt="Papelería de marca del Parque Zonal Huáscar" width="1100" height="825" loading="lazy">
+              <span class="g-item__info"><strong>Parque Zonal Huáscar</strong><span>Papelería de marca</span></span>
+            </button>
+          </li>
+          <li class="reveal" style="--d:0.24s">
+            <button class="g-item__btn" type="button" data-full="../assets/img/proyectos/doctor-labs.webp" data-title="Doctor Labs" data-sub="Papelería y merchandising" aria-haspopup="dialog">
+              <img src="../assets/img/proyectos/doctor-labs.webp" alt="Papelería y merchandising de Doctor Labs" width="1100" height="733" loading="lazy">
+              <span class="g-item__info"><strong>Doctor Labs</strong><span>Papelería y merchandising</span></span>
+            </button>
+          </li>
         </ul>
       </div>
     </section>
 
     <!-- ================= DE LA IDEA A LA PANTALLA ================= -->
-    <section class="a-process" aria-labelledby="proc-title">
-      <div class="container">
-        <h2 class="display a-process__title" id="proc-title" data-split>De la idea<br>a la pantalla</h2>
-        <ol class="steps">
-          <li class="reveal" style="--d:0.0s"><span class="steps__num">01</span><h3>Idea</h3><p>Objetivo, concepto y guion de cada pieza.</p></li>
-          <li class="reveal" style="--d:0.1s"><span class="steps__num">02</span><h3>Diseñar</h3><p>Storyboard, locaciones y plan de rodaje.</p></li>
-          <li class="reveal" style="--d:0.2s"><span class="steps__num">03</span><h3>Producir</h3><p>Grabación y fotografía con equipo profesional.</p></li>
-          <li class="reveal" style="--d:0.3s"><span class="steps__num">04</span><h3>Entregar</h3><p>Edición, color, sonido y formatos para cada red.</p></li>
+    <section class="av-proc" aria-labelledby="proc-title">
+      <div class="av-greca av-greca--amarilla" aria-hidden="true"></div>
+      <div class="av-canvas">
+        <h2 class="display av-t av-proc__title" id="proc-title" data-split>De la idea <em>a la pantalla</em></h2>
+        <ol class="av-steps">
+          <li class="reveal" style="--d:0s"><span class="av-steps__num display">01</span><h3 class="display">Idea</h3><p>Objetivo, concepto y<br>guion de cada pieza.</p></li>
+          <li class="reveal" style="--d:.1s"><span class="av-steps__num display">02</span><h3 class="display">Diseñar</h3><p>Storyboard, locaciones y<br>plan de rodaje.</p></li>
+          <li class="reveal" style="--d:.2s"><span class="av-steps__num display">03</span><h3 class="display">Producir</h3><p>Grabación y fotografía con<br>equipo profesional.</p></li>
+          <li class="reveal" style="--d:.3s"><span class="av-steps__num display">04</span><h3 class="display">Entregar</h3><p>Edición, color, sonido y formatos<br>para cada red.</p></li>
         </ol>
       </div>
     </section>
 
     <!-- ================= PAQUETES ================= -->
-    <section class="packs a-packs" id="paquetes" aria-labelledby="packs-title">
-      <div class="packs__bg" aria-hidden="true"><img src="../assets/img/servicios/produccion-video.webp" alt="" width="848" height="477" loading="lazy"></div>
-      <div class="container container--wide packs__inner">
-        <div class="a-packs__head">
-          <h2 class="display packs__title" id="packs-title" data-split>Paquetes de<br><span class="t-yellow">audiovisual</span></h2>
-          <a class="btn-skew a-packs__custom" href="../contacto/index.html?servicio=audiovisual&amp;plan=personalizado">Servicio personalizado</a>
-        </div>
-        <ul class="packs__grid">
+    <section class="av-packs" id="paquetes" aria-labelledby="packs-title">
+      <div class="av-packs__bg" aria-hidden="true"><img src="../assets/img/servicios/boceto-andino.webp" alt="" width="1548" height="1016" loading="lazy"></div>
+      <div class="av-canvas">
+        <h2 class="display av-packs__title" id="packs-title">
+          <span class="av-t av-packs__t1" data-split>Paquetes de</span>
+          <span class="av-t av-packs__t2" data-split>audiovisual</span>
+        </h2>
+        <ul class="av-packs__list">
             <li>
-              <article class="pack" style="--pc:var(--c-mint)">
-                <h3 class="pack__name">Básico</h3>
+              <article class="av-pack av-pack--basico">
+                <div class="av-pack__body">
+                <h3 class="av-pack__name display">Básico</h3>
                 <ul>
                   <li>Sesión de fotos de producto (hasta 15 fotos editadas)</li>
                   <li>1 video corto para redes (hasta 30 s)</li>
@@ -213,13 +244,15 @@
                   <li>Formatos 9:16 y 1:1</li>
                   <li>1 ronda de ajustes</li>
                 </ul>
-                <p class="pack__time">Entrega 7 días</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=audiovisual&amp;plan=basico">Cotizar aquí<span class="sr-only"> el paquete Básico de audiovisual</span></a>
+                <p class="av-pack__time">ENTREGA 7 días</p>
+                </div>
+                <a class="av-pack__foot display" href="../contacto/index.html?servicio=audiovisual&amp;plan=basico">Cotizar aquí<span class="sr-only"> el paquete Básico de audiovisual</span></a>
               </article>
             </li>
             <li>
-              <article class="pack" style="--pc:var(--c-yellow)">
-                <h3 class="pack__name">Intermedio</h3>
+              <article class="av-pack av-pack--intermedio">
+                <div class="av-pack__body">
+                <h3 class="av-pack__name display">Intermedio</h3>
                 <ul>
                   <li>Sesión de fotos de producto o local (hasta 30 fotos)</li>
                   <li>3 reels editados con música y subtítulos</li>
@@ -228,13 +261,15 @@
                   <li>Color y sonido profesional</li>
                   <li>2 rondas de ajustes</li>
                 </ul>
-                <p class="pack__time">Entrega 14 días</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=audiovisual&amp;plan=intermedio">Cotizar aquí<span class="sr-only"> el paquete Intermedio de audiovisual</span></a>
+                <p class="av-pack__time">ENTREGA 14 días</p>
+                </div>
+                <a class="av-pack__foot display" href="../contacto/index.html?servicio=audiovisual&amp;plan=intermedio">Cotizar aquí<span class="sr-only"> el paquete Intermedio de audiovisual</span></a>
               </article>
             </li>
             <li>
-              <article class="pack" style="--pc:var(--c-red-band)">
-                <h3 class="pack__name">Avanzado</h3>
+              <article class="av-pack av-pack--avanzado">
+                <div class="av-pack__body">
+                <h3 class="av-pack__name display">Avanzado</h3>
                 <ul>
                   <li>Video publicitario o corporativo (hasta 90 s)</li>
                   <li>6 reels para redes</li>
@@ -244,58 +279,57 @@
                   <li>Versiones 9:16, 1:1 y 16:9</li>
                   <li>3 rondas de ajustes</li>
                 </ul>
-                <p class="pack__time">Entrega 1 mes</p>
-                <a class="pack__foot" href="../contacto/index.html?servicio=audiovisual&amp;plan=avanzado">Cotizar aquí<span class="sr-only"> el paquete Avanzado de audiovisual</span></a>
+                <p class="av-pack__time">ENTREGA 1 mes</p>
+                </div>
+                <a class="av-pack__foot display" href="../contacto/index.html?servicio=audiovisual&amp;plan=avanzado">Cotizar aquí<span class="sr-only"> el paquete Avanzado de audiovisual</span></a>
               </article>
             </li>
         </ul>
       </div>
     </section>
-    <div class="greca-band" aria-hidden="true"></div>
 
     <!-- ================= CTA ================= -->
-    <section class="cta-final a-cta bg-brick" aria-labelledby="cta-title">
-      <div class="container cta-final__inner">
-        <img class="cta-final__glyph" src="../assets/img/grecas/llave-arriba.svg" alt="" width="41" height="76">
-        <h2 class="display cta-final__title" id="cta-title"><span class="t-yellow">Llevemos tu marca</span><span class="t-red">a la pantalla</span></h2>
-        <a class="btn btn--white btn--lg reveal" href="../contacto/index.html?servicio=audiovisual" data-magnetic>Cotizar ahora</a>
-        <img class="cta-final__glyph" src="../assets/img/grecas/llave-abajo.svg" alt="" width="42" height="75">
+    <section class="av-cta av-brick" aria-labelledby="cta-title">
+      <div class="av-greca av-greca--doble" aria-hidden="true"></div>
+      <div class="av-canvas">
+        <img class="av-cta__glyph av-cta__glyph--top" src="../assets/img/grecas/llave-arriba.svg" alt="" width="41" height="76">
+        <h2 class="display av-cta__title" id="cta-title"><span class="av-t av-cta__t1">Llevemos tu marca</span> <em class="av-t av-cta__t2">a la pantalla</em></h2>
+        <a class="av-btn av-cta__btn" href="../contacto/index.html?servicio=audiovisual" data-magnetic>Cotizar ahora</a>
+        <img class="av-cta__glyph av-cta__glyph--bottom" src="../assets/img/grecas/llave-abajo.svg" alt="" width="42" height="75">
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <img src="../assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="126" height="72" loading="lazy">
-        <p>Agencia de Marketing digital con alma peruana. Transformamos marcas en referentes visuales y digitales con creatividad y pasión.</p>
+        <img class="footer__logo" src="../assets/img/marca/logo-chaya-brava.svg" alt="Chaya Brava" width="173" height="99" loading="lazy">
+        <p>Agencia de Marketing digital con<br>alma peruana. Transformamos<br>marcas en referentes visuales y<br>digitales con creatividad<br>y pasión.</p>
         <ul class="social" aria-label="Redes sociales"><li><a href="https://www.facebook.com/chayabrava" target="_blank" rel="noopener" aria-label="Facebook de Chaya Brava"><img src="../assets/img/redes/facebook.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.instagram.com/chayabrava" target="_blank" rel="noopener" aria-label="Instagram de Chaya Brava"><img src="../assets/img/redes/instagram.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.youtube.com/@chayabrava" target="_blank" rel="noopener" aria-label="YouTube de Chaya Brava"><img src="../assets/img/redes/youtube.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.tiktok.com/@chayabrava" target="_blank" rel="noopener" aria-label="TikTok de Chaya Brava"><img src="../assets/img/redes/tiktok.svg" alt="" width="51" height="52"></a></li><li><a href="https://www.linkedin.com/company/chayabrava" target="_blank" rel="noopener" aria-label="LinkedIn de Chaya Brava"><img src="../assets/img/redes/linkedin.svg" alt="" width="51" height="52"></a></li></ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:165px">Servicios</h2>
+      <div class="footer__col footer__col--serv">
+        <h2 class="footer__title">Servicios</h2>
         <ul class="footer__links">
-          <li><a href="../branding/index.html">Branding y Identidad</a></li>
-          <li><a href="../audiovisual/index.html#produccion">Social Media</a></li>
-          <li><a href="../audiovisual/index.html#galeria">Fotografía</a></li>
+          <li><a href="../branding/index.html">Branding</a></li>
+          <li><a href="../audiovisual/index.html">Fotografía y Audiovisual</a></li>
           <li><a href="../paginas-web/index.html">Páginas Web</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:103px">Empresa</h2>
+      <div class="footer__col footer__col--emp">
+        <h2 class="footer__title">Empresa</h2>
         <ul class="footer__links">
           <li><a href="../nosotros/index.html">Nosotros</a></li>
-          <li><a href="../index.html#proyectos">Clientes</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
           <li><a href="../contacto/index.html">Contactos</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="footer__title" style="--w:205px">Contáctanos</h2>
+      <div class="footer__col footer__col--cont">
+        <h2 class="footer__title">Contáctanos</h2>
         <dl class="footer__contact">
           <dt>Teléfonos</dt>
           <dd><a href="tel:+51987270466">987 270 466</a></dd>
           <dt>Email</dt>
-          <dd><a href="mailto:chayabrava@gmail.com">chayabrava@gmail.com</a></dd>
+          <dd><a href="mailto:chayabrava@gmail.com">chayabrava<span class="footer__at">@</span>gmail.com</a></dd>
         </dl>
       </div>
     </div>

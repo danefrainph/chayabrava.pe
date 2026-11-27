@@ -10,7 +10,7 @@ El diseño sigue el prototipo definitivo (`prototipe de chaya web`), y sus imág
 |---|---|---|
 | `index.html` + `inicio/` | Inicio | Parallax del hero, tres llamas que se turnan cada 15 s y siguen el cursor, contadores, accesos rápidos incas |
 | `nosotros/` | Nosotros | Pestañas Misión / Visión / Propósito, valores y Chaya Staff |
-| `branding/` | Branding | Cinta de servicios animada, proyectos (`#proyectos`), paquetes (`#paquetes`) |
+| `branding/` | Branding | Proyectos alternados (`#proyectos`), paquetes (`#paquetes`) |
 | `audiovisual/` | Audiovisual | Galería de trabajos (`#galeria`) con visor a pantalla completa (teclado y gesto de deslizar) |
 | `paginas-web/` | Páginas Web | Maqueta del hero con movimiento, proyectos y paquetes (`#paquetes`) |
 | `contacto/` | Contacto | Formulario "¿Trabajamos juntos?" con validación; al enviar se elige WhatsApp o correo |
@@ -71,6 +71,9 @@ Las páginas quedan en direcciones limpias: `chayabrava.pe/nosotros/`, `chayabra
 ## Editar
 
 - **Barra roja superior**: el mes y el año se ponen solos con la hora de Perú (`assets/js/main.js`, `data-mes-actual`). El resto del texto está en cada HTML.
+- **Pie de página**: sigue el diseño `INTERFAZ FOOTER`. El texto y los enlaces se repiten en el HTML de las 7 páginas; las posiciones desde 1080 px de ancho están en la sección Footer de `assets/css/base.css`.
+- **Branding**: sigue el diseño `INTERFAZ BRANDING`. Los proyectos y paquetes están en `branding/index.html`; las posiciones desde 1080 px de ancho, al final de `branding.css`.
+- **Audiovisual**: sigue el diseño `INTERFAZ AUDIOVISUAL`. Las 12 fotos de la galería y los 3 paquetes están en `audiovisual/index.html`; las posiciones desde 1080 px de ancho, al final de `audiovisual.css`.
 - **Llamas del inicio**: el orden y las imágenes están en `index.html` (`hero__llamas`); el tiempo de cada una, en `inicio/inicio.js` (`SEGUNDOS_POR_LLAMA`).
 - **Bot Challu**: las preguntas y respuestas están al inicio de `assets/js/challu.js` (`FAQ` y `EXTRA`). Las palabras clave que reconoce cuando el visitante escribe están en `W`.
 - **WhatsApp y correo**: en `assets/js/main.js` (`window.CHAYA`) y en los enlaces `tel:` / `mailto:` de cada página.
