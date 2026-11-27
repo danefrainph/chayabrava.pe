@@ -26,7 +26,13 @@
 .hero__btn { min-height: 36px; padding: 6px 28px; font-size: 18px; }
 
 .hero__visual { position: relative; align-self: end; justify-self: center; width: clamp(220px, 21.8vw, 305px); margin: clamp(-90px, -5.6vw, -40px) clamp(0px, 4vw, 60px) 0 0; }
-.hero__alpaca { width: 100%; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); }
+/* Las llamas van apiladas: la activa al centro, las demás esperan a la derecha */
+.hero__llamas { display: grid; }
+.hero__alpaca { grid-area: 1 / 1; width: 100%; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); opacity: 0; transform: translateX(100%); }
+.hero__alpaca.is-active, .hero__alpaca.is-leaving { transition: transform .9s var(--ease-in-out), opacity .9s var(--ease-in-out); }
+.hero__alpaca.is-active { opacity: 1; transform: none; }
+.hero__alpaca.is-leaving { opacity: 0; transform: translateX(-100%); }
+@media (prefers-reduced-motion: reduce) { .hero__alpaca { transform: none !important; } }
 
 /* Barra de cifras */
 .hero__stats-wrap {

@@ -8,7 +8,7 @@ El diseño sigue el prototipo definitivo (`prototipe de chaya web`), y sus imág
 
 | Carpeta | Página | Lo interactivo |
 |---|---|---|
-| `index.html` + `inicio/` | Inicio | Parallax del hero, alpaca que sigue el cursor, contadores, accesos rápidos incas |
+| `index.html` + `inicio/` | Inicio | Parallax del hero, tres llamas que se turnan cada 15 s y siguen el cursor, contadores, accesos rápidos incas |
 | `nosotros/` | Nosotros | Pestañas Misión / Visión / Propósito, valores y Chaya Staff |
 | `branding/` | Branding | Cinta de servicios animada, proyectos (`#proyectos`), paquetes (`#paquetes`) |
 | `audiovisual/` | Audiovisual | Galería de trabajos (`#galeria`) con visor a pantalla completa (teclado y gesto de deslizar) |
@@ -44,7 +44,7 @@ chaya-brava/
     └── img/
         ├── marca/             ← logo (blanco y negro) en SVG, favicon, imagen para redes
         ├── fondos/            ← Andes, Machu Picchu, Vinicunca, montañas y muro inca
-        ├── personajes/        ← alpaca VR, alpaca con lentes, cámara andina, inca foco y Challu
+        ├── personajes/        ← llamas del hero (hero-llama-*), alpaca VR, alpaca con lentes, cámara andina, inca foco y Challu
         ├── proyectos/         ← Sinchi, El Taita, Tiendas Chan, Selecto Consultores, FS Farmacia…
         ├── servicios/         ← producción de video, boceto andino, estudio creativo
         ├── equipo/            ← fotos del Chaya Staff
@@ -70,6 +70,8 @@ Las páginas quedan en direcciones limpias: `chayabrava.pe/nosotros/`, `chayabra
 
 ## Editar
 
+- **Barra roja superior**: el mes y el año se ponen solos con la hora de Perú (`assets/js/main.js`, `data-mes-actual`). El resto del texto está en cada HTML.
+- **Llamas del inicio**: el orden y las imágenes están en `index.html` (`hero__llamas`); el tiempo de cada una, en `inicio/inicio.js` (`SEGUNDOS_POR_LLAMA`).
 - **Bot Challu**: las preguntas y respuestas están al inicio de `assets/js/challu.js` (`FAQ` y `EXTRA`). Las palabras clave que reconoce cuando el visitante escribe están en `W`.
 - **WhatsApp y correo**: en `assets/js/main.js` (`window.CHAYA`) y en los enlaces `tel:` / `mailto:` de cada página.
 - **Redes sociales**: las URL del pie de página son provisionales (`facebook.com/chayabrava`, etc.). Cámbialas en cada HTML, buscando `chayabrava"`.

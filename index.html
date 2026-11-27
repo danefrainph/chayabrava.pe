@@ -33,7 +33,7 @@
   </div>
 
   <div class="topbar">
-    <a href="contacto/index.html?servicio=branding"><span class="topbar__dot" aria-hidden="true"></span>Agenda abierta <span class="hide-sm">para proyectos </span>de Branding JULIO 2026</a>
+    <a href="contacto/index.html?servicio=branding"><span class="topbar__dot" aria-hidden="true"></span>Agenda abierta <span class="hide-sm">para proyectos </span><span>de Branding <span data-mes-actual></span></span></a>
   </div>
 
   <header class="header" id="top">
@@ -96,7 +96,12 @@
           <a class="btn hero__btn reveal" style="--d:.55s" href="contacto/index.html" data-magnetic>Cotizar ahora</a>
         </div>
         <div class="hero__visual" aria-hidden="true">
-          <img class="hero__alpaca" src="assets/img/personajes/alpaca-vr.webp" alt="" width="588" height="882">
+          <!-- Las llamas se turnan cada 15 s (inicio.js); la primera es la que se ve al entrar -->
+          <div class="hero__llamas">
+            <img class="hero__alpaca is-active" src="assets/img/personajes/hero-llama-lampara.webp" alt="" width="588" height="882">
+            <img class="hero__alpaca" src="assets/img/personajes/hero-llama-lentes.webp" alt="" width="588" height="882" fetchpriority="low">
+            <img class="hero__alpaca" src="assets/img/personajes/hero-llama-chullo.webp" alt="" width="588" height="882" fetchpriority="low">
+          </div>
         </div>
       </div>
 

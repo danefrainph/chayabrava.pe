@@ -19,6 +19,13 @@
     }
   };
 
+  /* ---------- Barra superior: mes y año actuales, según la hora de Perú ---------- */
+  const fecha = new Intl.DateTimeFormat("es-PE", { month: "long", year: "numeric", timeZone: "America/Lima" }).formatToParts(new Date());
+  const parte = (tipo) => fecha.find((p) => p.type === tipo).value;
+  document.querySelectorAll("[data-mes-actual]").forEach((el) => {
+    el.textContent = `${parte("month")} ${parte("year")}`.toUpperCase();
+  });
+
   /* ---------- Preloader (solo en la primera visita de la sesión) ---------- */
   const preloader = document.querySelector(".preloader");
   if (preloader) {

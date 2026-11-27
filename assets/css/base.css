@@ -567,6 +567,12 @@ body.menu-open { overflow: hidden; }
 }
 /* === FIN REVISIÓN 5 (general) === */
 
+/* Barra roja en una sola línea aunque el mes sea largo (NOVIEMBRE, DICIEMBRE…) */
+@media (max-width: 380px) {
+  .topbar { font-size: min(13px, 3.6vw); }
+  .topbar a { gap: 6px; white-space: nowrap; }
+}
+
 /* === REVISIÓN 7: proyectos con foto y texto lado a lado en tablet === */
 @media (min-width: 641px) and (max-width: 960px) {
   .project, .project--rev { grid-template-columns: 1fr 1fr; gap: 28px; }
